@@ -1,6 +1,6 @@
-**DOC API CODE&LEARN**
+#Introduction
 
-*HTTP Status : 200 si Ok, 404 ou 500 si erreur*
+HTTP Status: 200 si Ok, 404 ou 500 si erreur
 
 
 # REFERENCES GET:
@@ -10,7 +10,7 @@
 
 Si l’utilisateur est connecté, renvoie un token et le ttl de la session.
 
-    {
+	{
 		"login_token": "0123456789ABCDEF",
 		"login_ttl": 3600
 	}
@@ -20,7 +20,7 @@ Si l’utilisateur est connecté, renvoie un token et le ttl de la session.
 
 Si l’utilisateur n’est pas connecté, renvoie un Status HTTP de 429 si l’utilisateur a dépassé le nombre de tentative d’authentification sinon renvoie :
 
-    {
+	{
 		"login_attempts": 1,
 		"login_max_attemps": 3,
 		"login_cooldown": 3600
@@ -43,10 +43,10 @@ Si le Status HTTP est 200:
 		"user_group_id": 1
 	}
 
-`user_id` : l’id de l’utilisateur dans la base de données.
-`username` : le nom de l’utilisateur.
-`user_email` : son email.
-`user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions)
+* `user_id` : l’id de l’utilisateur dans la base de données;
+* `username` : le nom de l’utilisateur;
+* `user_email` : son email;
+* `user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions).
 
 Si l’utilisateur n’a pas été trouvé (404):
 
@@ -74,10 +74,10 @@ Si le Status HTTP est 200:
 		"user_group_id": 1
 	}
 
-`user_id` : l’id de l’utilisateur dans la base de données.
-`username` : le nom de l’utilisateur.
-`user_email` : son email.
-`user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions)
+* `user_id` : l’id de l’utilisateur dans la base de données;
+* `username` : le nom de l’utilisateur;
+* `user_email` : son email;
+* `user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions)
 
 Si l’utilisateur n’a pas été trouvé (404):
 
@@ -102,10 +102,10 @@ Prend un id en paramètre. Renvoie les permissions liées à cet id si le Status
 		"group_id": 0
 	}
 
-`permission_id` : l’id de ces permissions.
-`permission_name` : leur nom.
-`permission_code` : permet de savoir ce qu’elles permettent.
-`group_id` : le groupe possédant ces permissions.
+* `permission_id` : l’id de ces permissions;
+* `permission_name` : leur nom;
+* `permission_code` : permet de savoir ce qu’elles permettent;
+* `group_id` : le groupe possédant ces permissions.
 
 Si l’id n’a pas été trouvé (404):
 
@@ -130,10 +130,10 @@ Prend l’id d’un groupe en paramètre. Renvoie les permissions liées à un g
 		"group_id": 0
 	}
 
-`permission_id` : l’id de ces permissions.
-`permission_name` : leur nom.
-`permission_code` : permet de savoir ce qu’elles permettent.
-`group_id` : le groupe possédant ces permissions.
+* `permission_id` : l’id de ces permissions;
+* `permission_name` : leur nom;
+* `permission_code` : permet de savoir ce qu’elles permettent;
+* `group_id` : le groupe possédant ces permissions.
 
 Si le group_id n’a pas été trouvé (404):
 
