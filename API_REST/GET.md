@@ -1,7 +1,5 @@
 **DOC API CODE&LEARN**
 
-
-
 *HTTP Status : 200 si Ok, 404 ou 500 si erreur*
 
 
