@@ -11,8 +11,8 @@
 Si l’utilisateur est connecté, renvoie un token et le ttl de la session.
 
     {
-		“login_token”: "0123456789ABCDEF",
-		"login_ttl”: 3600
+		"login_token": "0123456789ABCDEF",
+		"login_ttl": 3600
 	}
 
 * `login_token` : renvoie le token de la session en cours;
@@ -21,9 +21,9 @@ Si l’utilisateur est connecté, renvoie un token et le ttl de la session.
 Si l’utilisateur n’est pas connecté, renvoie un Status HTTP de 429 si l’utilisateur a dépassé le nombre de tentative d’authentification sinon renvoie :
 
     {
-		“login_attempts”: 1,
-		“login_max_attemps”: 3,
-		“login_cooldown”: 3600
+		"login_attempts": 1,
+		"login_max_attemps": 3,
+		"login_cooldown": 3600
 	}
 
 * `login_attempts` : le nombre de tentatives de connexion;
@@ -37,10 +37,10 @@ Renvoie les informations sur l’utilisateur “username”.
 Si le Status HTTP est 200:
 
 	{
-		“user_id”: 0,
-		“username”: “John”,
-		“user_email”: “john@legend.ie”,
-		“user_group_id”: 1
+		"user_id": 0,
+		"username": "John",
+		"user_email": "john@legend.ie",
+		"user_group_id": 1
 	}
 
 `user_id` : l’id de l’utilisateur dans la base de données.
@@ -51,13 +51,13 @@ Si le Status HTTP est 200:
 Si l’utilisateur n’a pas été trouvé (404):
 
 	{
-		“error”: “No user found with this name.”
+		"error": "No user found with this name."
 	}
 
 En cas de permissions insuffisantes (401):
 
 	{
-		“error”: “You’re not allowed to see this.”
+		"error": "You’re not allowed to see this."
 	}
 
 
@@ -68,10 +68,10 @@ Renvoie les informations sur l’utilisateur par son id.
 Si le Status HTTP est 200:
 
 	{
-		“user_id”: 0,
-		“username”: “John”,
-		“user_email”: “john@legend.ie”,
-		“user_group_id”: 1
+		"user_id": 0,
+		"username": "John",
+		"user_email": "john@legend.ie",
+		"user_group_id": 1
 	}
 
 `user_id` : l’id de l’utilisateur dans la base de données.
@@ -82,13 +82,13 @@ Si le Status HTTP est 200:
 Si l’utilisateur n’a pas été trouvé (404):
 
 	{
-		“error”: “No user found with this id.”
+		"error": "No user found with this id."
 	}
 
 En cas de permissions insuffisantes (401):
 
 	{
-		“error”: “You’re not allowed to see this.”
+		"error": "You’re not allowed to see this."
 	}
 
 ## GET: /permissions/&lt;int:id&gt;
@@ -96,10 +96,10 @@ En cas de permissions insuffisantes (401):
 Prend un id en paramètre. Renvoie les permissions liées à cet id si le Status HTTP est 200.
 
 	{
-		“permission_id”: 0,
-		“permission_name”: “Admin”,
-		“permission_code”: 0,
-		“group_id”: 0
+		"permission_id": 0,
+		"permission_name": “Admin”,
+		"permission_code": 0,
+		"group_id": 0
 	}
 
 `permission_id` : l’id de ces permissions.
@@ -110,13 +110,13 @@ Prend un id en paramètre. Renvoie les permissions liées à cet id si le Status
 Si l’id n’a pas été trouvé (404):
 
 	{
-		“error”: “No permissions found with this id.”
+		"error": "No permissions found with this id."
 	}
 
 En cas de permissions insuffisantes (401):
 
 	{
-		“error”: “You’re not allowed to see this.”
+		"error": "You’re not allowed to see this."
 	}
 
 ## GET: /permissions/groupid/&lt;int:groupid&gt;
@@ -124,10 +124,10 @@ En cas de permissions insuffisantes (401):
 Prend l’id d’un groupe en paramètre. Renvoie les permissions liées à un groupe si le Status HTTP est 200.
 
 	{
-		“permission_id”: 0,
-		“permission_name”: “Admin”,
-		“permission_code”: 0,
-		“group_id”: 0
+		"permission_id": 0,
+		"permission_name": "Admin",
+		"permission_code": 0,
+		"group_id": 0
 	}
 
 `permission_id` : l’id de ces permissions.
@@ -138,13 +138,11 @@ Prend l’id d’un groupe en paramètre. Renvoie les permissions liées à un g
 Si le group_id n’a pas été trouvé (404):
 
 	{
-		“error”: “No permissions found with this group id.”
+		"error": "No permissions found with this group id."
 	}
 
 En cas de permissions insuffisantes (401):
 
 	{
-		“error”: “You’re not allowed to see this.”
+	    "error": "You’re not allowed to see this."
 	}
-
-
