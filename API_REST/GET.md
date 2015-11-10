@@ -36,7 +36,7 @@ Si l’utilisateur n’est pas connecté, renvoie un HTTP Status de 429 si l’u
 
 Renvoie les informations sur l’utilisateur “username”.
 
-Si le HTTP Status est 200:
+Si le Status HTTP est 200:
 
 	{
 		“user_id”: 0,
@@ -45,33 +45,36 @@ Si le HTTP Status est 200:
 		“user_group_id”: 1
 	}
 
-user_id : l’id de l’utilisateur dans la base de données.
-username : le nom de l’utilisateur.
-user_email : son email.
-user_group_id : le groupe auquel il appartient (permet de connaître ses permissions)
+`user_id` : l’id de l’utilisateur dans la base de données.
+`username` : le nom de l’utilisateur.
+`user_email` : son email.
+`user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions)
 
 Si l’utilisateur n’a pas été trouvé (404):
-{
-	“error”: “No user found with this name.”
-}
+
+	{
+		“error”: “No user found with this name.”
+	}
 
 En cas de permissions insuffisantes (401):
-{
-	“error”: “You’re not allowed to see this.”
-}
+
+	{
+		“error”: “You’re not allowed to see this.”
+	}
 
 
-GET: /user/id/<int:id>
+##GET: /user/id/&lt;int:id&gt;
 
 Renvoie les informations sur l’utilisateur par son id.
 
-Si le HTTP Status est 200:
-{
-	“user_id”: 0,
-	“username”: “John”,
-	“user_email”: “john@legend.ie”,
-	“user_group_id”: 1
-}
+Si le Status HTTP est 200:
+
+	{
+		“user_id”: 0,
+		“username”: “John”,
+		“user_email”: “john@legend.ie”,
+		“user_group_id”: 1
+	}
 
 user_id : l’id de l’utilisateur dans la base de données.
 username : le nom de l’utilisateur.
