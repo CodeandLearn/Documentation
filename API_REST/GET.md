@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 HTTP Status: 200 si Ok, 404 ou 500 si erreur
 
@@ -97,7 +97,7 @@ Prend un id en paramètre. Renvoie les permissions liées à cet id si le Status
 
 	{
 		"permission_id": 0,
-		"permission_name": “Admin”,
+		"permission_name": "Admin",
 		"permission_code": 0,
 		"group_id": 0
 	}
