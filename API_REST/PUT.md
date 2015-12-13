@@ -4,9 +4,9 @@ Références PUT
 En cas de succès, le code 200 sera renvoyé.
 
 ## PUT /account
-Update les informations du comptes
+Update les informations du comptes.
 
-paramètres :
+Paramètres :
 
     {
      "username": Serginho-kun
@@ -16,7 +16,7 @@ paramètres :
     }
 
 ## PUT /course
-mettre à un jour un cours
+Mettre à un jour un cours.
 
 Paramètres :
 
@@ -29,9 +29,9 @@ Paramètres :
     }
 
 ## PUT /exercice
-mettre à jour un exercice
+Mettre à jour un exercice.
 
-paramètres :
+Paramètres :
 
     {
     "content": "contenu du commentaire"
@@ -43,9 +43,9 @@ paramètres :
     }
 
 ## PUT /exercice/script
-mettre à jour un script de vérification
+Mettre à jour un script de vérification.
 
-paramètres :
+Paramètres :
 
     {
     "exercice_id": 2113
@@ -54,9 +54,9 @@ paramètres :
     }
 
 ## PUT /blog/post
-mettre à jour un post du blog
+Mettre à jour un post du blog.
 
-paramètres :
+Paramètres :
 
     {
      "id" : 0
@@ -69,9 +69,9 @@ paramètres :
     }
 
 ## PUT /forum
-mettre à jour le nom du forum
+Mettre à jour le nom du forum.
 
-paramètres :
+Paramètres :
 
     {
      "id": 1
@@ -80,9 +80,9 @@ paramètres :
     }
 
 ## PUT /forum/category
-mettre à jour le nom de la categorie
+Mettre à jour le nom de la categorie.
 
-paramètres :
+Paramètres :
 
     {
      "id": 1
@@ -92,9 +92,9 @@ paramètres :
 
 
 ## PUT /forum/post
-mettre à jour un message du forum
+Mettre à jour un message du forum.
 
-paramètres :
+Paramètres :
 
     {
      "id": 1

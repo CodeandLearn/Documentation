@@ -13,19 +13,19 @@ Paramètres :
      "Password" : "123456789"
     }
 
-reponse en cas de succes :
+Réponse en cas de succes :
 
     {
-    "token" : "123456789ABCDEF"
+	"token" : "123456789ABCDEF"
     }
 
-en cas de pseudo non reconnu: 
+En cas de pseudo non reconnu: 
 
     {
     "error": "No such pseudo in the website"
     }
 
-en cas de mauvais mot de passe
+En cas de mauvais mot de passe :
 
     {
     "error" : "Bad Password"
@@ -33,6 +33,7 @@ en cas de mauvais mot de passe
 
 **POST /account/register**
 Créer un compte.
+paramètres :
 
     {
      "username" : "Serginho-kun"
@@ -41,26 +42,26 @@ Créer un compte.
      "group" : "regular"
     }
 
-réponse en cas de succès 
+Réponse en cas de succès 
 
     {
      "code": 201
     }
 
-réponse en cas d’email déjà utilisé le code HTTP 409 et :
+Réponse en cas d’email déjà utilisé :
 
     {
     "error": "this email is already in use"
     }
 
-réponse en cas de mot de passe pas assez securisé :
+Réponse en cas de mot de passe pas assez securisé :
 
     {
     "error": "the password is not good"
     }
 
 ## POST /exercice
-créer un exercice
+Créer un exercice
 paramètres :
 
     {
@@ -87,7 +88,7 @@ paramètres :
     }
 
 ## POST /exercice/script
-Créer un script de verification pour un exercice
+Créer un script de verification pour un exercice.
 
 paramètres :
 
@@ -109,9 +110,9 @@ paramètres :
      }
 
 ## POST /exercice/save_code
-Sauvegarde le code l’utilisateur sur un exercice
+Sauvegarde le code l’utilisateur sur un exercice.
 
-paramètres :
+Paramètres :
 
     {
      "account_id": 42
@@ -156,7 +157,7 @@ En cas de permission pas suffisantes :
 ## POST /course/comment
 Commenter un cours. 
 
-paramètres :
+Paramètres :
 
     {
      "title" : "à revoir"
@@ -205,7 +206,7 @@ en cas d’erreur d’authorisation :
     }
 
 **POST /blog/comment_post**
-poster un commentaire à un article
+poster un commentaire à un article.
 
  paramètres :
 
@@ -223,9 +224,9 @@ en cas d'erreur de token
     }
 
 ## POST /forum/forum
-Créer une un forum
+Créer une un forum.
 
-paramètres :
+Paramètres :
 
     {
      "nom" : "forum d’aide au language C"
@@ -235,7 +236,7 @@ paramètres :
 
 
 ## POST /forum/subject
-créer un sujet sur le forum
+créer un sujet sur le forum.
 
 paramètres : 
 
@@ -248,9 +249,9 @@ paramètres :
     }
 
 ## POST  /forum/post
-écrire un message sur le forum
+Ecrire un message sur le forum.
 
-paramètres : 
+Paramètres : 
 
     {
      "author": "Serginho-kun"

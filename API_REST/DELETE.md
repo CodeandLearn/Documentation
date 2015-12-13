@@ -1,12 +1,12 @@
-En cas de succès, un code 200 sera retourné.
-
 Référence DELETE
 ----------------
 
-## DELETE /account
-supprimer un compte
+En cas de succès, un code 200 sera retourné.
 
-paramètres :
+## DELETE /account
+Supprimer un compte.
+
+Paramètres :
 
     {
      "id" : 1
@@ -16,9 +16,9 @@ paramètres :
     }
 
 ## DELETE /groups
-supprimer un groupe
+Supprimer un groupe.
 
-paramètres :
+Paramètres :
 
     {
      "id": 2
@@ -26,9 +26,9 @@ paramètres :
     }
 
 ## DELETE /course
-supprimer un cours
+Supprimer un cours.
 
-paramètres :
+Paramètres :
 
     {
      "id" : 2
@@ -36,9 +36,9 @@ paramètres :
     }
 
 ## DELETE /course/comment
-supprimer un commentaire d’un cours
+Supprimer un commentaire d’un cours.
 
-paramètres :
+Paramètres :
 
     {
      "id" : 2
@@ -46,9 +46,9 @@ paramètres :
     }
 
 ## DELETE /exercice
-supprimer un exercice
+Supprimer un exercice.
 
-paramètres :
+Paramètres :
 
     {
     "id": 12
@@ -57,9 +57,9 @@ paramètres :
     }
 
 ## DELETE /exercice/comment
-Supprimer le commentaire d’un exercice
+Supprimer le commentaire d’un exercice.
 
-paramètres :
+Paramètres :
 
     {
     "id": 1
@@ -67,30 +67,30 @@ paramètres :
     }
 
 ## DELETE /blog/post
-Supprimer un post sur le blog
+Supprimer un post sur le blog.
 
-paramètres :
+Paramètres :
 
     {
      "id": 54
       "token" : "123456789ABCDEF"
     }
 
-    DELETE /blog/category
+## DELETE /blog/category
 
-Supprimer une categorie du blog
+Supprimer une categorie du blog.
 
-paramètres :
+Paramètres :
 
     {
      "id": 1
-      "token" : "123456789ABCDEF"
+     "token" : "123456789ABCDEF"
     }
 
 ## DELETE /blog/comment
-Supprimer un commentaire d’un post sur le blog
+Supprimer un commentaire d’un post sur le blog.
 
-paramètres:
+Paramètres:
 
     {
      "id" : 1
@@ -98,9 +98,9 @@ paramètres:
     }
 
 ## DELETE /forum/post
-Supprimer un message sur le forum
+Supprimer un message sur le forum.
 
-paramètres :
+Paramètres :
 
     {
      "id" : 21
@@ -108,9 +108,9 @@ paramètres :
     }
 
 ## DELETE /forum/category
-Supprimer une catégorie du forum
+Supprimer une catégorie du forum.
 
-paramètres :
+Paramètres :
 
     {
      "id" : 1
