@@ -3,7 +3,7 @@ Références PUT
 
 En cas de succès, le code 200 sera renvoyé.
 
-PUT /account
+**PUT /account**
 Update les informations du comptes.
 
 Paramètres :
@@ -14,7 +14,7 @@ Paramètres :
 		"password": "newpassword1",
 		"token" : "123456789ABCDEF"
     }
-PUT /course
+**PUT /course**
 Mettre à un jour un cours.
 
 Paramètres :
@@ -27,7 +27,7 @@ Paramètres :
 		"language" : "C"
     }
 
- PUT /exercice
+**PUT /exercice**
 Mettre à jour un exercice.
 
 Paramètres :
@@ -41,7 +41,7 @@ Paramètres :
 		"timestamp": 12569537329
     }
 
-PUT /exercice/script
+**PUT /exercice/script**
 Mettre à jour un script de vérification.
 
 Paramètres :
@@ -51,7 +51,7 @@ Paramètres :
 		"content": "Contenu du script",
 		"token" : "123456789ABCDEF"
     }
-PUT /blog/post
+**PUT /blog/post**
 Mettre à jour un post du blog.
 
 Paramètres :
@@ -66,7 +66,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-PUT /forum
+**PUT /forum**
 Mettre à jour le nom du forum.
 
 Paramètres :
@@ -77,7 +77,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-PUT /forum/category
+**PUT /forum/category**
 Mettre à jour le nom de la categorie.
 
 Paramètres :
@@ -89,7 +89,7 @@ Paramètres :
     }
 
 
-PUT /forum/post
+**PUT /forum/post**
 Mettre à jour un message du forum.
 
 Paramètres :

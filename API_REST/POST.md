@@ -3,7 +3,7 @@ Références POST
 
 En cas de succès, un code 201 sera retourné. En cas d’erreur de permission, le code 401 sera retourné
 
-POST /login/
+**POST /login/**
 Prend le pseudo et le mot de passe en paramètre.
 
 Paramètres :
@@ -31,7 +31,7 @@ En cas de mauvais mot de passe :
 		"error" : "Bad Password"
     }
 
-POST /account/register
+**POST /account/register**
 Créer un compte.
 paramètres :
 
@@ -60,7 +60,7 @@ Réponse en cas de mot de passe pas assez securisé :
 		"error": "the password is not good"
     }
 
-POST /exercice
+**POST /exercice**
 Créer un exercice
 paramètres :
 
@@ -73,7 +73,7 @@ paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-POST /exercice/comment
+**POST /exercice/comment**
 Commenter un exercice
 
 paramètres :
@@ -87,7 +87,7 @@ paramètres :
 		"timestamp": 12569537329
     }
 
-POST /exercice/script
+**POST /exercice/script**
 Créer un script de verification pour un exercice.
 
 paramètres :
@@ -98,7 +98,7 @@ paramètres :
 		"token" : "123456789ABCDEF",
     }
 
- POST /exercice/correction
+**POST /exercice/correction**
 écrire une correction
 
 paramètres :
@@ -109,7 +109,7 @@ paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-POST /exercice/save_code
+**POST /exercice/save_code**
 Sauvegarde le code l’utilisateur sur un exercice.
 
 Paramètres :
@@ -122,7 +122,7 @@ Paramètres :
 		"exercice_id" : 2113,
     }
 
-POST /course
+**POST /course**
 Créer un cours. 
 
 paramètres :
@@ -154,7 +154,7 @@ En cas de permission pas suffisantes le code erreur 403 et le message suivant :
     }
 
 
-POST /course/comment
+**POST /course/comment**
 Commenter un cours. 
 
 Paramètres :
@@ -180,7 +180,7 @@ dans le cas où l’utilisateur n’as pas de permission adequate :
 		"error": "you don’t have the permission to do that."
     }
 
-POST /blog/post
+**POST /blog/post**
 Créer un post sur le blog.
 
 Paramètres:
@@ -205,7 +205,7 @@ en cas d’erreur d’authorisation :
 		"error": "you don’t have the permission to do that.
     }
 
-POST /blog/comment_post
+**POST /blog/comment_post**
 Poster un commentaire à un article.
 
  paramètres :
@@ -223,7 +223,7 @@ en cas d'erreur de token :
 		"error": "bad token"
     }
 
-POST /forum/forum
+**POST /forum/forum**
 Créer une un forum.
 
 Paramètres :
@@ -235,7 +235,7 @@ Paramètres :
     }
 
 
-POST /forum/subject
+**POST /forum/subject**
 créer un sujet sur le forum.
 
 paramètres : 
@@ -248,7 +248,7 @@ paramètres :
 		"token" : "123456789ABCDEF",
     }
 
-POST  /forum/post
+**POST  /forum/post**
 Ecrire un message sur le forum.
 
 Paramètres : 

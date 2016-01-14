@@ -3,7 +3,7 @@ Référence DELETE
 
 En cas de succès, un code 200 sera retourné.
 
-DELETE/account
+**DELETE/account**
 Supprimer un compte.
 
 Paramètres :
@@ -15,7 +15,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/groups
+**DELETE/groups**
 Supprimer un groupe.
 
 Paramètres :
@@ -25,7 +25,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/course
+**DELETE/course**
 Supprimer un cours.
 
 Paramètres :
@@ -35,7 +35,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/course/comment
+**DELETE/course/comment**
 Supprimer un commentaire d’un cours.
 
 Paramètres :
@@ -45,7 +45,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/exercice
+**DELETE/exercice**
 Supprimer un exercice.
 
 Paramètres :
@@ -56,7 +56,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/exercice/comment
+**DELETE/exercice/comment**
 Supprimer le commentaire d’un exercice.
 
 Paramètres :
@@ -66,7 +66,7 @@ Paramètres :
 		"exercice_id": 12
     }
 
-DELETE/blog/post
+**DELETE/blog/post**
 Supprimer un post sur le blog.
 
 Paramètres :
@@ -76,7 +76,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/blog/category
+**DELETE/blog/category**
 
 Supprimer une categorie du blog.
 
@@ -87,7 +87,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/blog/comment
+**DELETE/blog/comment**
 Supprimer un commentaire d’un post sur le blog.
 
 Paramètres:
@@ -98,7 +98,7 @@ Paramètres:
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/forum/post
+**DELETE/forum/post**
 Supprimer un message sur le forum.
 
 Paramètres :
@@ -108,7 +108,7 @@ Paramètres :
 		"token" : "123456789ABCDEF"
     }
 
-DELETE/forum/category
+**DELETE/forum/category**
 Supprimer une catégorie du forum.
 
 Paramètres :
