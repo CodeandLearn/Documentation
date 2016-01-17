@@ -3,7 +3,7 @@
 HTTP Status: 200 si Ok, 404 ou 500 si erreur
 
 
-# REFERENCES GET:
+# References GET
 
 
 ## GET: /login
@@ -147,6 +147,7 @@ En cas de permissions insuffisantes (401):
 	    "error": "You’re not allowed to see this."
 	}
 
+<<<<<<< HEAD
 ## GET: /course/list
 renvoi la liste des cours
 paramètres:
@@ -446,3 +447,29 @@ En cas de permissions insuffisantes (401):
 	    "error": "You’re not allowed to see this."
 	}	
 	
+=======
+## GET: /blog
+
+Récupération des articles du blog:
+
+	{
+		"posts": [
+			{"id": 0, "title": "Hello World!", "content": "This is the first post", "author": {"id": 0, "username": "hirsch_b"}, "date": 1452768354948, "tags": ["C", "Python"]},
+			{"id": 1, "title": "Another post", "content": "This is the second post", "author": {"id": 0, "username": "hirsch_b"}, "date": 1452768354950, "tags": ["Ruby", "Ruby"]}
+		],
+		"total_posts": 2
+	}
+
+* `posts`: renvoie une liste d'article marqué comme publié:
+	* `id`: renvoie l'identifiant de l'article;
+	* `title`: renvoie le titre de l'article;
+	* `content`: renvoie le corps du texte de l'article;
+	* `author`: renvoie un objet décrivant l'auteur:
+		* `id`: renvoie l'identifiant de l'auteur de l'article;
+		* `username`: renvoie le nom d'utilisateur de l'auteur de l'article.
+	
+	* `date`: renvoie la date et l'heure de la création de l'article sous forme de `timestamp`;
+	* `tags`: renvoie une liste de tags permettant de classer l'article.
+
+* `total_posts`: renvoie le nombre total d'article marqué comme publié.
+>>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
