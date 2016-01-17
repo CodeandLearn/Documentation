@@ -190,7 +190,7 @@ Paramètres:
 		"content" : "Bla bla bla",
 		"creator_id" : "kevin13",
 		"token" : "123456789ABCDEF",
-		blog_category_id : 2
+		"blog_category_id" : 2
     }
 
 en cas d’erreur de token :
