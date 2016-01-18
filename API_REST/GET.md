@@ -447,7 +447,6 @@ En cas de permissions insuffisantes (401):
 	    "error": "You’re not allowed to see this."
 	}	
 	
-=======
 ## GET: /blog
 
 Récupération des articles du blog:

@@ -3,12 +3,8 @@ Références POST
 
 En cas de succès, un code 201 sera retourné. En cas d’erreur de permission, le code 401 sera retourné
 
-<<<<<<< HEAD
-**POST /login/**
-=======
-## POST: /login
 
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
+## POST: /login
 Prend le pseudo et le mot de passe en paramètre.
 
 Paramètres:
@@ -37,11 +33,6 @@ En cas de mauvais mot de passe:
 	}
 
 ## POST: /account/register
-
-<<<<<<< HEAD
-**POST /account/register**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Créer un compte.
 
 Paramètres:
@@ -73,10 +64,6 @@ Réponse en cas de mot de passe pas assez securisé:
 
 ## POST: /exercice
 
-<<<<<<< HEAD
-**POST /exercice**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Créer un exercice
 paramètres:
 
@@ -91,10 +78,6 @@ paramètres:
 
 ## POST: /exercice/comment
 
-<<<<<<< HEAD
-**POST /exercice/comment**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Commenter un exercice
 
 paramètres:
@@ -108,11 +91,8 @@ paramètres:
 		"timestamp": 12569537329
 	}
 
-<<<<<<< HEAD
-**POST /exercice/script**
-=======
+
 ## POST: /exercice/script
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Créer un script de verification pour un exercice.
 
 paramètres:
@@ -123,11 +103,8 @@ paramètres:
 		"token": "123456789ABCDEF",
 	}
 
-<<<<<<< HEAD
-**POST /exercice/correction**
-=======
 ## POST: /exercice/correction
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
+
 écrire une correction
 
 paramètres:
@@ -140,10 +117,6 @@ paramètres:
 
 ## POST: /exercice/save_code
 
-<<<<<<< HEAD
-**POST /exercice/save_code**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Sauvegarde le code l’utilisateur sur un exercice.
 
 Paramètres:
@@ -156,11 +129,8 @@ Paramètres:
 		"exercice_id": 2113,
 	}
 
-<<<<<<< HEAD
-**POST /course**
-=======
+
 ## POST: /course
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Créer un cours. 
 
 paramètres:
@@ -191,13 +161,8 @@ En cas de permission pas suffisantes le code erreur 403 et le message suivant:
 		"error": "you don’t have the permission to do that."
 	}
 
-
-<<<<<<< HEAD
-**POST /course/comment**
-=======
 ## POST: /course/comment
 
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Commenter un cours. 
 
 Paramètres:
@@ -223,24 +188,12 @@ dans le cas où l’utilisateur n’as pas de permission adequate:
 		"error": "you don’t have the permission to do that."
 	}
 
-<<<<<<< HEAD
-**POST /blog/post**
-=======
 ## POST:  /blog/post
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
+
 Créer un post sur le blog.
 
 Paramètres:
 
-<<<<<<< HEAD
-    {
-		"title" : "le C en 29 minutes ne dure parfois pas 29 minutes",
-		"content" : "Bla bla bla",
-		"creator_id" : "kevin13",
-		"token" : "123456789ABCDEF",
-		"blog_category_id" : 2
-    }
-=======
 	{
 		"title": "le C en 29 minutes ne dure parfois pas 29 minutes",
 		"content": "Bla bla bla",
@@ -248,7 +201,7 @@ Paramètres:
 		"token": "123456789ABCDEF",
 		"blog_category_id": 2
 	}
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
+
 
 en cas d’erreur de token:
 
@@ -264,10 +217,6 @@ en cas d’erreur d’authorisation:
 
 ## POST: /blog/comment_post
 
-<<<<<<< HEAD
-**POST /blog/comment_post**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Poster un commentaire à un article.
 
  paramètres:
@@ -287,10 +236,6 @@ en cas d'erreur de token:
 
 ## POST: /forum/forum
 
-<<<<<<< HEAD
-**POST /forum/forum**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Créer une un forum.
 
 Paramètres:
@@ -304,10 +249,6 @@ Paramètres:
 
 ## POST: /forum/subject
 
-<<<<<<< HEAD
-**POST /forum/subject**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 créer un sujet sur le forum.
 
 paramètres: 
@@ -322,10 +263,6 @@ paramètres:
 
 ## POST: /forum/post
 
-<<<<<<< HEAD
-**POST  /forum/post**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Ecrire un message sur le forum.
 
 Paramètres: 

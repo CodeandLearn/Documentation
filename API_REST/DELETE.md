@@ -3,12 +3,8 @@ Référence DELETE
 
 En cas de succès, un code 200 sera retourné.
 
-<<<<<<< HEAD
-**DELETE/account**
-=======
 ## DELETE: /account
 
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un compte.
 
 Paramètres :
@@ -22,10 +18,6 @@ Paramètres :
 
 ## DELETE: /groups
 
-<<<<<<< HEAD
-**DELETE/groups**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un groupe.
 
 Paramètres :
@@ -37,10 +29,6 @@ Paramètres :
 
 ## DELETE/course
 
-<<<<<<< HEAD
-**DELETE/course**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un cours.
 
 Paramètres :
@@ -52,10 +40,6 @@ Paramètres :
 
 ## DELETE: /course/comment
 
-<<<<<<< HEAD
-**DELETE/course/comment**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un commentaire d’un cours.
 
 Paramètres :
@@ -67,10 +51,6 @@ Paramètres :
 
 ## DELETE: /exercice
 
-<<<<<<< HEAD
-**DELETE/exercice**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un exercice.
 
 Paramètres :
@@ -83,10 +63,6 @@ Paramètres :
 
 ## DELETE: /exercice/comment
 
-<<<<<<< HEAD
-**DELETE/exercice/comment**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer le commentaire d’un exercice.
 
 Paramètres :
@@ -98,10 +74,6 @@ Paramètres :
 
 ## DELETE: /blog/post
 
-<<<<<<< HEAD
-**DELETE/blog/post**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un post sur le blog.
 
 Paramètres :
@@ -111,11 +83,8 @@ Paramètres :
 		"token": "123456789ABCDEF"
 	}
 
-<<<<<<< HEAD
-**DELETE/blog/category**
-=======
 ## DELETE: /blog/category
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
+
 
 Supprimer une categorie du blog.
 
@@ -128,10 +97,6 @@ Paramètres :
 
 ## DELETE: /blog/comment
 
-<<<<<<< HEAD
-**DELETE/blog/comment**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un commentaire d’un post sur le blog.
 
 Paramètres:
@@ -143,11 +108,6 @@ Paramètres:
 	}
 
 ## DELETE: /forum/post
-
-<<<<<<< HEAD
-**DELETE/forum/post**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer un message sur le forum.
 
 Paramètres :
@@ -159,10 +119,6 @@ Paramètres :
 
 ## DELETE: /forum/category
 
-<<<<<<< HEAD
-**DELETE/forum/category**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Supprimer une catégorie du forum.
 
 Paramètres :

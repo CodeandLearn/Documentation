@@ -3,12 +3,8 @@ Références PUT
 
 En cas de succès, le code 200 sera renvoyé.
 
-<<<<<<< HEAD
-**PUT /account**
-=======
 ## PUT: /account
 
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Update les informations du comptes.
 
 Paramètres:
@@ -61,10 +57,6 @@ Paramètres:
 
 ## PUT: /exercice/script
 
-<<<<<<< HEAD
-**PUT /exercice/script**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Mettre à jour un script de vérification.
 
 Paramètres:
@@ -72,17 +64,11 @@ Paramètres:
 	{
 		"exercice_id": 2113,
 		"content": "Contenu du script",
-<<<<<<< HEAD
-		"token" : "123456789ABCDEF"
-    }
-**PUT /blog/post**
-=======
 		"token": "123456789ABCDEF"
 	}
 
 ## PUT: /blog/post
 
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Mettre à jour un post du blog.
 
 Paramètres:
@@ -99,10 +85,6 @@ Paramètres:
 
 ## PUT: /forum
 
-<<<<<<< HEAD
-**PUT /forum**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Mettre à jour le nom du forum.
 
 Paramètres:
@@ -115,10 +97,6 @@ Paramètres:
 
 ## PUT: /forum/category
 
-<<<<<<< HEAD
-**PUT /forum/category**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Mettre à jour le nom de la categorie.
 
 Paramètres:
@@ -132,10 +110,6 @@ Paramètres:
 
 ## PUT: /forum/post
 
-<<<<<<< HEAD
-**PUT /forum/post**
-=======
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
 Mettre à jour un message du forum.
 
 Paramètres:
