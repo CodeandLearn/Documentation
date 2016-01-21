@@ -330,6 +330,7 @@ renvoie la liste des post du blog
 
 paramètres :
 	{
+		
 	}
 	
 réponse en cas de succes (200):
@@ -366,13 +367,15 @@ paramètres :
 	}
 
 réponse en cas de succes (200): 
-	[
-		{
-			"title" : "Tu m’as ouvert les yeux",
-			"content" : "Bla bla bla",
-			"creator_id" : "kevin13"
-		}	
-	]	
+	{
+		[
+			{
+				"title" : "Tu m’as ouvert les yeux",
+				"content" : "Bla bla bla",
+				"creator_id" : "kevin13"
+			}	
+		]	
+	}
 	
 ## GET: /forum/forum
 renvoie la liste des forums
@@ -381,13 +384,15 @@ paramètres :
 	}
 	
 réponse en cas de succes (200):
-	[
-		{
-			"id" : 2,
-			"name" : "aide aux exercices",
-			"description" : "ici, demandez de l'aide en rapport aux exercices de C&L",			
-		}
-	]
+	{
+		[
+			{
+				"id" : 2,
+				"name" : "aide aux exercices",
+				"description" : "ici, demandez de l'aide en rapport aux exercices de C&L",			
+			}
+		]
+	}		
 	
 ## GET: /forum/subject
 renvoie les sujets du forum.
@@ -471,4 +476,3 @@ Récupération des articles du blog:
 	* `tags`: renvoie une liste de tags permettant de classer l'article.
 
 * `total_posts`: renvoie le nombre total d'article marqué comme publié.
->>>>>>> 7d8db6c0e6a36be05c57ec91f95323f172de51c0
