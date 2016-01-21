@@ -1,0 +1,28 @@
+[{
+	"name": "main.c",
+	"language": "clike",
+	"closable": false,
+	"readonly": false,
+	"content": "#include <stdlib.h>\\n#include <stdio.h>\\n\\nint 
+main(int ac, char** av) {\\n\\tprintf(\"Hello World!\\n\");\\n\\treturn 
+(EXIT_SUCCESS);\\n}"
+}, {
+	"name": "main.js",
+	"language": "javascript",
+	"closable": true,
+	"readonly": true,
+	"content": "console.log(\"Hello World!\");"
+}, {
+	"name": "main.rb",
+	"language": "ruby",
+	"closable": true,
+	"readonly": false,
+	"content": "puts \"Hello World!\""
+}, {
+	"name": "main.py",
+	"language": "python",
+	"closable": true,
+	"readonly": false,
+	"content": "print(\"Hello World!\")\\nfor i in 
+range(10):\\n\\tprint(i)"
+}]
