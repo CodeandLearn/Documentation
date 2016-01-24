@@ -14,4 +14,5 @@
 * **405**: Méthode de requête non autorisée;
 * **411**: La longueur de la requête n'a pas été précisée;
 * **418**: I"m a teapot !!!;
-* **429**: Le client a émis trop de requêtes dans un délai donné.
+* **429**: Le client a émis trop de requêtes dans un délai donné;
+* **500**: Erreur interne du serveur.

@@ -1,6 +1,6 @@
 # References POST
-##### POST: /login
-Si l’utilisateur est connecté, renvoie un token et le ttl de la session.
+##### POST: /login/<string:username>/<string:password>
+###### Connexion réussit
 ```
 	{
 		"token": "0123456789ABCDEF",
@@ -8,11 +8,10 @@ Si l’utilisateur est connecté, renvoie un token et le ttl de la session.
 		"status": 200
 	}
 ```
-* `token`: renvoie le token de la session en cours;
-* `token_ttl`: renvoie le temps restant de la session en cours;
-* `error_code`: code 200, voir [Codes d'erreur]("./ERROR.md").
-
-Si l’utilisateur n’est pas connecté, renvoie un Status HTTP de 429 si l’utilisateur a dépassé le nombre de tentative d’authentification sinon renvoie :
+* `token`<string>: renvoie le token de la session en cours;
+* `token_ttl`<integer>: renvoie le temps restant de la session en cours;
+* `status`<integer: code 200, voir [Codes d'erreur]("./API_REST/ERROR.md").
+###### Username ou password erroné
 ```
 	{
 		"login_attempts": 1,
@@ -21,10 +20,11 @@ Si l’utilisateur n’est pas connecté, renvoie un Status HTTP de 429 si l’u
 		"status": 404
 	}
 ```
-* `login_attempts`: le nombre de tentatives de connexion;
-* `login_max_attempts`: le nombre maximum de tentatives;
-* `login_coldown`: le temps avant que le nombre de tentatives se remette à 0, temps en secondes;
-* `error_code`: code 404, voir [Codes d'erreur]("./ERROR.md").
+* `login_attempts`<integer>: le nombre de tentatives de connexion;
+* `login_max_attempts`<integer>: le nombre maximum de tentatives;
+* `login_coldown`<integer>: le temps avant que le nombre de tentatives se remette à 0, temps en secondes;
+* `status`<integer>: code 404, voir [Codes d'erreur]("./API_REST/ERROR.md").
+###### Trop de tentatives infructueuses
 ```
     {
         "login_attempts": 3,
@@ -32,6 +32,15 @@ Si l’utilisateur n’est pas connecté, renvoie un Status HTTP de 429 si l’u
         "status": 429
     }
 ```
-* `login_attempts`: le nombre de tentatives réalisés, se référer à `login_max_attempts`;
-* `login_ban_duration`: le temps avant d'autoriser à nouveau à l'utilisateur de se connecter, temps en secondes;
-* `error_code`: code 429, voir [Codes d'erreur]("./ERROR.md").
+* `login_attempts`<integer>: le nombre de tentatives réalisés, se référer à `login_max_attempts`;
+* `login_ban_duration`<integer>: le temps avant d'autoriser à nouveau à l'utilisateur de se connecter, temps en secondes;
+* `statuts`<integer>: code 429, voir [Codes d'erreur]("./API_REST/ERROR.md").
+###### Utilisateur banni
+```
+    {
+        "login_ban_duration_end": xx,
+        "status": 500
+    }
+```
+* `login_ban_duration_end`<integer>: le temps restant que l'utilisateur est banni, temps en secondes;
+* `status`<integer>: code 500, voir [Codes d'erreur]("./API_REST/ERROR.md").
