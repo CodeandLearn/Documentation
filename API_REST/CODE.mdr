@@ -1,4 +1,4 @@
-# Codes d'erreur
+# Codes
 ##### Informations
 * **100**: Attent de la suite de la requête.
 
@@ -15,4 +15,10 @@
 * **411**: La longueur de la requête n'a pas été précisée;
 * **418**: I"m a teapot !!!;
 * **429**: Le client a émis trop de requêtes dans un délai donné;
-* **500**: Erreur interne du serveur.
+* **500**: Erreur interne du serveur;
+
+##### Codes additionnel
+* **600**: Donnée déjà présente dans la base de donnée;
+* **601**: Une donnée est mal formatée;
+* **602**: Donnée invalide;
+* **700**: L'utilisateur est banni.
