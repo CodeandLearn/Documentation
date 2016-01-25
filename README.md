@@ -5,4 +5,4 @@
 * [POST](./API_REST/POST.md)
 * [PUT](./API_REST/PUT.md)
 * [DELETE](./API_REST/DELETE.md)
-* [ERROR](./API_REST/ERROR.md)
+* [CODE](./API_REST/CODE.md)
