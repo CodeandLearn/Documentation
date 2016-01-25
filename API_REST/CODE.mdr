@@ -22,4 +22,5 @@
 * **601**: Une donnée est mal formatée;
 * **602**: Donnée invalide;
 * **603**: Donnée manquante;
+* **604**: Une valeur dépasse la valeur max;
 * **700**: L'utilisateur est banni.
