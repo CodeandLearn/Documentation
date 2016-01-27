@@ -16,7 +16,7 @@ Si le Status HTTP est 200:
 * `username` : le nom de l’utilisateur;
 * `user_email` : son email;
 * `user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions);
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET: /user/id/[string:token]/[int:id]**
 Renvoie les informations sur l’utilisateur par son id.
@@ -35,7 +35,7 @@ Si le Status HTTP est 200:
 * `username` : le nom de l’utilisateur;
 * `user_email` : son email;
 * `user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions);
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET: /user/email/[string:token]/[string:email]**
 Renvoie les informations sur l’utilisateur par son email.
@@ -54,7 +54,7 @@ Si le Status HTTP est 200:
 * `username` : le nom de l’utilisateur;
 * `user_email` : son email;
 * `user_group_id` : le groupe auquel il appartient (permet de connaître ses permissions);
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/user/exercice/id/[string:token]/[int:id]**
 Renvoi les informations d'un exercice fait par un utilisateur par son id.
@@ -75,7 +75,7 @@ Si le Status HTTP est 200:
 * `exercice_id` : l'id de l'énoncé de l'exercice;
 * `grade_id` : l'id de la note attribuée;
 * `code_id` : l'id du code fourni par l'utilisateur;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/user/exercice/account_id/[string:token]/[int:account_id]**
 Renvoi les informations des exercice fait par un utilisateur par son account_id.
@@ -96,7 +96,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `exercice_id` : l'id de l'énoncé de l'exercice;
 * `grade_id` : l'id de la note attribuée;
 * `code_id` : l'id du code fourni par l'utilisateur;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/user/exercice/exercice_id/[string:token]/[int:exercice_id]**
 Renvoi les informations des exercice fait par un utilisateur à partir de l'id de l'énoncé.
@@ -117,7 +117,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `exercice_id` : l'id de l'énoncé de l'exercice;
 * `grade_id` : l'id de la note attribuée;
 * `code_id` : l'id du code fourni par l'utilisateur;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/user/exercice/grade_id/[string:token]/[int:grade_id]**
 Renvoi les informations de l'exercice lié à la note par son grade_id.
@@ -138,7 +138,7 @@ Si le Status HTTP est 200:
 * `exercice_id` : l'id de l'énoncé de l'exercice;
 * `grade_id` : l'id de la note attribuée;
 * `code_id` : l'id du code fourni par l'utilisateur;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/user/exercice/code_id/[string:token]/[int:code_id]**
 Renvoi les informations de l'exercice lié au code fourni par l'utilisateur par son code_id.
@@ -159,7 +159,7 @@ Si le Status HTTP est 200:
 * `exercice_id` : l'id de l'énoncé de l'exercice;
 * `grade_id` : l'id de la note attribuée;
 * `code_id` : l'id du code fourni par l'utilisateur;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/blog/category/id/[string:token]/[int:id]**
 Renvoie une catégorie du blog par son id.
@@ -174,7 +174,7 @@ Si le Status HTTP est 200:
 ```
 * `id` : l'id de la catégorie;
 * `name` : le nom de la catégorie;
-* `status` : code 200, voir [Codes d'erreur](./ERROR.md).
+* `status` : code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/blog/category/name/[string:token]/[string:name]**
 Renvoie une catégorie du blog par son nom.
@@ -189,7 +189,7 @@ Si le Status HTTP est 200:
 ```
 * `id` : l'id de la catégorie;
 * `name` : le nom de la catégorie;
-* `status` : code 200, voir [Codes d'erreur](./ERROR.md).
+* `status` : code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/blog/comment/id/[string:token]/[int:id]**
 Renvoie un commentaire d'un post du blog par son id.
@@ -210,7 +210,7 @@ Si le Status HTTP est 200:
 * `blog_post_id` : l'id du post contenant ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle le commentaire a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/blog/comment/account_id/[string:token]/[int:account_id]**
 Renvoie les commentaires d'un utilisateur sur le blog par son account_id.
@@ -231,7 +231,7 @@ Si le Status HTTP est 200, cela renvoie une array d'objet JSON de ce format:
 * `blog_post_id` : l'id du post contenant ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle le commentaire a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/blog/comment/blog_post_id/[string:token]/[int:blog_post_id]**
 Renvoie les commentaires d'un post sur le blog par son id.
@@ -252,7 +252,7 @@ Si le Status HTTP est 200, cela renvoie une array d'objet JSON de ce format:
 * `blog_post_id` : l'id du post contenant ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle le commentaire a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/blog/comment/date/[string:token]/[string:date]**
 Renvoie les commentaires du blog postés à cette date.
@@ -273,7 +273,7 @@ Si le Status HTTP est 200, cela renvoie une array d'objet JSON de ce format:
 * `blog_post_id` : l'id du post contenant ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle le commentaire a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/code/id/[string:token]/[int:id]**
 Renvoie les informations sur le code d'un exercice par son id.
@@ -292,7 +292,7 @@ Si le Status HTTP est 200:
 * `account_id`: l'id du compte de l'auteur de ce code;
 * `user_exercice_id` : l'id de l'exercice auquel il appartient;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/code/account_id/[string:token]/[int:account_id]**
 Renvoie les informations sur les codes d'un utilisateur par son account_id.
@@ -311,7 +311,7 @@ Si le Status HTTP est 200, cela renvoie une array d'objet JSON de ce format :
 * `account_id`: l'id du compte de l'auteur de ce code;
 * `user_exercice_id` : l'id de l'exercice auquel il appartient;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 
 #### **GET:/code/user_exercice_id/[string:token]/[int:user_exercice_id]**
@@ -331,7 +331,7 @@ Si le Status HTTP est 200, cela renvoie une array d'objet JSON de ce format :
 * `account_id`: l'id du compte de l'auteur de ce code;
 * `user_exercice_id` : l'id de l'exercice auquel il appartient;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/id/[string:token]/[int:id]**
 Renvoie les informations sur un cours par son id.
@@ -354,7 +354,7 @@ Si le Status HTTP est 200:
 * `language_id` : l'id du langage concerné (ex: C++);
 * `title` : le titre du cours;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/account_id/[string:token]/[int:account_id]**
 Renvoie les informations sur les cours crées par un utilisateur par son account_id.
@@ -377,7 +377,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `language_id` : l'id du langage concerné (ex: C++);
 * `title` : le titre du cours;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/locales_id/[string:token]/[int:locales_id]**
 Renvoie les informations sur les cours rédigés dans un langage par son id.
@@ -400,7 +400,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `language_id` : l'id du langage concerné (ex: C++);
 * `title` : le titre du cours;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/language_id/[string:token]/[int:language_id]**
 Renvoie les informations sur les cours concernant un langage de programmation par son id.
@@ -423,7 +423,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `language_id` : l'id du langage concerné (ex: C++);
 * `title` : le titre du cours;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/title/[string:token]/[string:title]**
 Renvoie les informations sur les cours ayant comme titre (ou partie de titre) la string title.
@@ -446,7 +446,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `language_id` : l'id du langage concerné (ex: C++);
 * `title` : le titre du cours;
 * `content` : le contenu du code;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/comment/id/[string:token]/[int:id]**
 Renvoie un commentaire d'un cours par son id.
@@ -467,7 +467,7 @@ Si le Status HTTP est 200:
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/comment/account_id/[string:token]/[int:account_id]**
 Renvoie les commentaires de cours d'un utilisateur par son account_id.
@@ -488,7 +488,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/comment/course_id/[string:token]/[int:course_id]**
 Renvoie les commentaires d'un cours par son id.
@@ -509,7 +509,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/course/comment/date/[string:token]/[string:date]**
 Renvoie les commentaires des cours postés à cette date.
@@ -530,7 +530,7 @@ Si le Status HTTP est 200, cela renvoie une array d'objet JSON de ce format:
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/id/[string:token]/[int:id]**
 Renvoie un exercice par son id.
@@ -559,7 +559,7 @@ Si le Status HTTP est 200:
 * `script_id` : l'id du script de compilation et de correction lié à cet exercice;
 * `grade_max` : la note maximum possible;
 * `correction_id` : l'id du code de correction de l'exercice;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/account_id/[string:token]/[int:account_id]**
 Renvoie les exercices d'un créateur par son account_id.
@@ -588,7 +588,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `script_id` : l'id du script de compilation et de correction lié à cet exercice;
 * `grade_max` : la note maximum possible;
 * `correction_id` : l'id du code de correction de l'exercice;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/course_id/[string:token]/[int:course_id]**
 Renvoie les exercices par l'id du cours qui y est lié.
@@ -617,7 +617,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `script_id` : l'id du script de compilation et de correction lié à cet exercice;
 * `grade_max` : la note maximum possible;
 * `correction_id` : l'id du code de correction de l'exercice;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/title/[string:token]/[string:title]**
 Renvoie les exercices dont le titre est/contient [string:title].
@@ -646,7 +646,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `script_id` : l'id du script de compilation et de correction lié à cet exercice;
 * `grade_max` : la note maximum possible;
 * `correction_id` : l'id du code de correction de l'exercice;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/comment/id/[string:token]/[int:id]**
 Renvoie un commentaire d'un exercice par son id.
@@ -667,7 +667,7 @@ Si le Status HTTP est 200:
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/comment/account_id/[string:token]/[int:account_id]**
 Renvoie les commentaires d'exercices d'un utilisateur par son account_id.
@@ -688,7 +688,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/comment/exercice_id/[string:token]/[int:exercice_id]**
 Renvoie les commentaires d'un exercice par son id.
@@ -709,7 +709,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/comment/date/[string:token]/[string:date]**
 Renvoie les commentaires d'exercices postés à cette date.
@@ -730,7 +730,7 @@ Si le Status HTTP est 200, cela renvoie une array d'objet JSON de ce format:
 * `account_id` : l'id du compte de l'auteur de ce commentaire;
 * `content` : le contenu du commentaire;
 * `date` : la date à laquelle il a été posté;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/exercice/correction/id/[string:token]/[int:id]**
 Renvoie la correction d'un exercice par son id.
@@ -745,7 +745,7 @@ Si le Status HTTP est 200:
 ```
 * `id` : l'id de la correction;
 * `content` : le contenu de la correction;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/category/id/[string:token]/[int:id]**
 Renvoie une catégorie de forum par son id.
@@ -760,7 +760,7 @@ Si le Status HTTP est 200:
 ```
 * `id` : l'id de la catégorie;
 * `name` : le nom de la catégorie;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/category/id/[string:token]/[string:name]**
 Renvoie une catégorie de forum par son nom.
@@ -775,7 +775,7 @@ Si le Status HTTP est 200:
 ```
 * `id` : l'id de la catégorie;
 * `name` : le nom de la catégorie;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/forums/id/[string:token]/[int:id]**
 Renvoie un forum par son id.
@@ -793,7 +793,7 @@ Si le Status HTTP est 200:
 * `id` : l'id du forum;
 * `forum_category_id` : la catégorie du forum;
 * `name` : le nom du forum;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/forums/forum_category_id/[string:token]/[int:forum_category_id]**
 Renvoie les forums d'une catégorie par son id.
@@ -811,7 +811,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `id` : l'id du forum;
 * `forum_category_id` : la catégorie du forum;
 * `name` : le nom du forum;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/forums/name/[string:token]/[string:name]**
 Renvoie les forums dont le nom est/contient [string:name].
@@ -829,7 +829,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `id` : l'id du forum;
 * `forum_category_id` : la catégorie du forum;
 * `name` : le nom du forum;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/id/[string:token]/[int:id]**
 Renvoie un sujet du forum par son id.
@@ -856,7 +856,7 @@ Si le Status HTTP est 200:
 * `date` : la date de la création du sujet;
 * `replies` : le nombre de réponses au sujet;
 * `views` : le nombre de personnes ayant lues/vues le sujet;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/forum_forums_id/[string:token]/[int:forum_forums_id]**
 Renvoie les sujets contenus dans un forum par son id.
@@ -883,7 +883,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du sujet;
 * `replies` : le nombre de réponses au sujet;
 * `views` : le nombre de personnes ayant lues/vues le sujet;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/locales_id/[string:token]/[int:locales_id]**
 Renvoie les sujets rédigés dans une langue par son id.
@@ -910,7 +910,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du sujet;
 * `replies` : le nombre de réponses au sujet;
 * `views` : le nombre de personnes ayant lues/vues le sujet;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/title/[string:token]/[string:title]**
 Renvoie les sujets dont le titre est/contient [string:title].
@@ -937,7 +937,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du sujet;
 * `replies` : le nombre de réponses au sujet;
 * `views` : le nombre de personnes ayant lues/vues le sujet;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/account_id/[string:token]/[int:account_id]**
 Renvoie les sujets d'un utilisateur par son account_id.
@@ -964,7 +964,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du sujet;
 * `replies` : le nombre de réponses au sujet;
 * `views` : le nombre de personnes ayant lues/vues le sujet;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/date/[string:token]/[string:date]**
 Renvoie les sujets crées à la date donnée.
@@ -991,7 +991,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du sujet;
 * `replies` : le nombre de réponses au sujet;
 * `views` : le nombre de personnes ayant lues/vues le sujet;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/post/id/[string:token]/[int:id]**
 Renvoie un post d'un sujet du forum par son id.
@@ -1014,7 +1014,7 @@ Si le Status HTTP est 200:
 * `date` : la date de la création du post;
 * `content` : le contenu du post;
 * `likes` : le nombre de "Like";
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/post/forum_subject_id/[string:token]/[int:forum_subject_id]**
 Renvoie les posts d'un sujet par son id.
@@ -1037,7 +1037,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du post;
 * `content` : le contenu du post;
 * `likes` : le nombre de "Like";
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/post/account_id/[string:token]/[int:account_id]**
 Renvoie les posts d'un utilisateur par son account_id.
@@ -1060,7 +1060,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du post;
 * `content` : le contenu du post;
 * `likes` : le nombre de "Like";
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/forum/subject/post/date/[string:token]/[string:date]**
 Renvoie les posts postés à une date précise.
@@ -1083,7 +1083,7 @@ Si le Status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `date` : la date de la création du post;
 * `content` : le contenu du post;
 * `likes` : le nombre de "Like";
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/grade/id/[string:token]/[int:id]**
 Renvoie une note par son id.
@@ -1104,7 +1104,7 @@ Si le status HTTP est 200:
 * `exercice_id` : l'id de l'exercice qui a été noté;
 * `value` : la note;
 * `log_id` : l'id du log de correction;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/grade/account_id/[string:token]/[int:account_id]**
 Renvoie les notes d'un utilisateur par son account_id.
@@ -1125,7 +1125,7 @@ Si le status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `exercice_id` : l'id de l'exercice qui a été noté;
 * `value` : la note;
 * `log_id` : l'id du log de correction;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/grade/exercice_id/[string:token]/[int:exercice_id]**
 Renvoie les notes d'un exercice par son id.
@@ -1146,7 +1146,7 @@ Si le status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `exercice_id` : l'id de l'exercice qui a été noté;
 * `value` : la note;
 * `log_id` : l'id du log de correction;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/grade/value/[string:token]/[int:value]**
 Renvoie les notes d'une valeur précise.
@@ -1167,7 +1167,7 @@ Si le status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `exercice_id` : l'id de l'exercice qui a été noté;
 * `value` : la note;
 * `log_id` : l'id du log de correction;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/grade/log_id/[string:token]/[int:log_id]**
 Renvoie la note lié à un log de correction par son id.
@@ -1188,7 +1188,7 @@ Si le status HTTP est 200:
 * `exercice_id` : l'id de l'exercice qui a été noté;
 * `value` : la note;
 * `log_id` : l'id du log de correction;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/group/id/[string:token]/[int:id]**
 Renvoie un groupe par son id.
@@ -1205,7 +1205,7 @@ Si le status HTTP est 200:
 * `id` : l'id du groupe;
 * `name` : le nom du groupe;
 * `parent_id` : l'id du groupe parent;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/group/name/[string:token]/[string:name]**
 Renvoie un groupe par son nom.
@@ -1222,7 +1222,7 @@ Si le status HTTP est 200:
 * `id` : l'id du groupe;
 * `name` : le nom du groupe;
 * `parent_id` : l'id du groupe parent;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/group/parent_id/[string:token]/[int:parent_id]**
 Renvoie un groupe par son groupe parent.
@@ -1239,7 +1239,7 @@ Si le status HTTP est 200:
 * `id` : l'id du groupe;
 * `name` : le nom du groupe;
 * `parent_id` : l'id du groupe parent;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/language/id/[string:token]/[int:id]**
 Renvoie un langage par son id.
@@ -1254,7 +1254,7 @@ Si le status HTTP est 200:
 ```
 * `id` : l'id du langage;
 * `name` : le nom du langage;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/language/name/[string:token]/[string:name]**
 Renvoie un langage par son nom.
@@ -1269,7 +1269,7 @@ Si le status HTTP est 200:
 ```
 * `id` : l'id du langage;
 * `name` : le nom du langage;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/locale/id/[string:token]/[int:id]**
 Renvoie une langue par son id.
@@ -1284,7 +1284,7 @@ Si le status HTTP est 200:
 ```
 * `id` : l'id de la langue;
 * `name` : le nom de la langue;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/locale/name/[string:token]/[string:name]**
 Renvoie une langue par son nom.
@@ -1299,7 +1299,7 @@ Si le status HTTP est 200:
 ```
 * `id` : l'id de la langue;
 * `name` : le nom de la langue;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/log/id/[string:token]/[int:id]**
 Renvoie un log par son id.
@@ -1316,7 +1316,7 @@ Si le status HTTP est 200:
 * `id` : l'id du log;
 * `content` : le contenu du log;
 * `script_id` : le script de correction qui a donné ce log;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/log/script_id/[string:token]/[int:script_id]**
 Renvoie les logs crées par un script par son id.
@@ -1333,7 +1333,7 @@ Si le status HTTP est 200, la requête renvoie une array d'objet JSON de ce form
 * `id` : l'id du log;
 * `content` : le contenu du log;
 * `script_id` : le script de correction qui a donné ce log;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
 
 #### **GET:/script/id/[string:token]/[int:id]**
 Renvoie un script de correction par son id.
@@ -1348,4 +1348,4 @@ Si le status HTTP est 200:
 ```
 * `id` : l'id du script de correction;
 * `content` : le contenu du script de correction;
-* `status`: code 200, voir [Codes d'erreur](./ERROR.md).
+* `status`: code 200, voir [Codes d'erreur](./API_REST/ERROR.md).
