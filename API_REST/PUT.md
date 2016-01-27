@@ -1111,3 +1111,56 @@
     }
 ```
 * **[integer:`status`]**: code 600.
+
+## [Autre] PUT [JSON RAW]: /other/avatar/create
+### Paramètres à envoyer
+```
+    {
+        "token": "0123456789ABCDEF",
+        "path": ""
+    }
+```
+* **[string:`token`]**: token de connexion;
+* **[string:`path`]**: chemin de l'avatar.
+
+### Ajout de l'avatar réussit
+```
+    {
+		"id": 1,
+        "status": 200
+    }
+```
+* **[integer:`id`]**: l'id de l'avatar réçament ajouté;
+* **[integer:`status`]**: code 204.
+
+### Informations manquantes
+```
+    {
+        "status": 603
+    }
+```
+* **[integer:`status`]**: code 603.
+
+### Informations invalides
+```
+    {
+        "status": 602
+    }
+```
+* **[integer:`status`]**: code 602.
+
+### Informations mal formatés
+```
+    {
+        "status": 601
+    }
+```
+* **[integer:`status`]**: code 601.
+
+### Avatar déjà présent dans la base de donnée
+```
+    {
+        "status": 600
+    }
+```
+* **[integer:`status`]**: code 600.
