@@ -1,7 +1,4 @@
 # Codes
-## Informations
-* **100**: Attent de la suite de la requête.
-
 ## Succès
 * **200**: Requête traitée avec succès;
 * **204**: Requête traitée avec succès mais pas d'information à renvoyer.
@@ -17,19 +14,13 @@
 * **429**: Le client a émis trop de requêtes dans un délai donné;
 * **500**: Erreur interne du serveur;
 
-## Suppression en cour...
-* **601**: Une donnée est mal formatée;
-* **602**: Donnée invalide;
-* **603**: Donnée manquante;
-* **604**: Une valeur dépasse la valeur max;
-
 ## Codes additionnel
 * **600**: Donnée déjà présente dans la base de donnée;
 * **700**: L'utilisateur est banni.
 
 ***
 
-# Examples
+# Exemples
 ## [400] La syntaxe de la requête est erronée
 ***
 ```
@@ -151,6 +142,40 @@
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 500;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
+
+## [600] Donnée déjà présente dans la base de donnée
+***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 600,
+		"error": "...",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 600;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
+
+## [700] L'utilisateur est banni
+***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 700,
+		"error": "...",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 700;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
