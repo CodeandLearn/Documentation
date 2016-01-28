@@ -56,9 +56,9 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 403,
-		"error": "...",
+		"error": "Forbidden",
 		"message": "...",
-		"path": "/account/modify"
+		"path": "/"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
@@ -69,18 +69,88 @@
 
 ## [404] Ressource non trouvée
 ***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 404,
+		"error": "Not Found",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 404;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
 
 ## [405] Méthode de requête non autorisée
 ***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 405,
+		"error": "Method Not Allowed",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 405;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
 
 ## [411] La longueur de la requête n'a pas été précisée
 ***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 411,
+		"error": "Length Required",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 411;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
 
 ## [418] I"m a teapot !!!
 ***
 
 ## [429] Le client a émis trop de requêtes dans un délai donné
 ***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 429,
+		"error": "Too Many Requests",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 429;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
 
 ## [500] Erreur interne du serveur
 ***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 500,
+		"error": "Internal Server Error",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 500;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
