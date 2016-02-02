@@ -10,7 +10,6 @@
 * **404**: Ressource non trouvée;
 * **405**: Méthode de requête non autorisée;
 * **411**: La longueur de la requête n'a pas été précisée;
-* **418**: I"m a teapot !!!;
 * **429**: Le client a émis trop de requêtes dans un délai donné;
 * **500**: Erreur interne du serveur;
 
@@ -21,6 +20,40 @@
 ***
 
 # Exemples
+## [200] Requête traitée avec succès
+***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 200,
+		"error": "OK",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 200;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
+
+## [204] Requête traitée avec succès mais pas d'information à renvoyer
+***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 204,
+		"error": "No Content",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 204;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
+
 ## [400] La syntaxe de la requête est erronée
 ***
 ```
@@ -40,6 +73,20 @@
 
 ## [401] Une authentification est nécessaire pour accéder à la ressource
 ***
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 401,
+		"error": "Unauthorized",
+		"message": "...",
+		"path": "/"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 401;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
 
 ## [403] Le serveur a compris la requête, mais refuse de l'exécuter, permission non accordée
 ***
@@ -108,9 +155,6 @@
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
-
-## [418] I"m a teapot !!!
-***
 
 ## [429] Le client a émis trop de requêtes dans un délai donné
 ***
