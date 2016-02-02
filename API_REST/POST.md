@@ -110,7 +110,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/account/modify"
 	}
@@ -182,7 +182,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/account/group/modify"
 	}
@@ -264,7 +264,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/modify"
 	}
@@ -335,7 +335,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/moderation/modify"
 	}
@@ -405,7 +405,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/correction/modify"
 	}
@@ -475,7 +475,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/script/modify"
 	}
@@ -547,7 +547,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/script/log/modify"
 	}
@@ -623,7 +623,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/grade/modify"
 	}
@@ -697,7 +697,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/user/modify"
 	}
@@ -769,7 +769,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/user/code/modify"
 	}
@@ -843,7 +843,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/exercise/comment/modify"
 	}
@@ -921,7 +921,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/course/modify"
 	}
@@ -992,7 +992,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/course/moderation"
 	}
@@ -1062,7 +1062,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/course/language/modify"
 	}
@@ -1136,7 +1136,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/course/commente/modify"
 	}
@@ -1214,7 +1214,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/blog/post/modify"
 	}
@@ -1284,7 +1284,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/blog/post/category/modify"
 	}
@@ -1358,7 +1358,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/blog/post/comment/modify"
 	}
@@ -1432,7 +1432,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/forum/modify"
 	}
@@ -1502,7 +1502,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/forum/categorie/modify"
 	}
@@ -1578,7 +1578,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/forum/post/modify"
 	}
@@ -1633,7 +1633,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/forum/post/like"
 	}
@@ -1688,7 +1688,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/forum/post/likes"
 	}
@@ -1762,7 +1762,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/forum/subject/modify"
 	}
@@ -1832,7 +1832,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/forum/subject/modify"
 	}
@@ -1902,7 +1902,7 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 204,
-		"error": "OK",
+		"error": "No Content",
 		"message": "...",
 		"path": "/other/avatar/modify"
 	}
