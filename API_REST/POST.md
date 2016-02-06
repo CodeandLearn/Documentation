@@ -328,6 +328,7 @@
 * @NOT NULL **[integer:`exercice_id`]**: id de modération de l'exercice à modifier;
 * **[integer:`moderation_validate_id`]**: id du statut de modération;
 * **[string:`commentary`]**: commentaire relatif à la modération.
+
 ***
 
 ### Réception
@@ -967,6 +968,7 @@
 * @NOT NULL **[integer:`course_id`]**: id du cour;
 * **[integer:`moderation_validate_id`]**: id du statut du cour à modérer;
 * **[string:`commentary`]**: commentaire relatif au cour.
+
 ***
 
 ### Réception
