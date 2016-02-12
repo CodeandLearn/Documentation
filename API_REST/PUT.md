@@ -80,15 +80,15 @@
 	{
 		"timestamp": 1453903559817,
 		"id": 1,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/account/group/create/"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`id`]**: id de l'enregistrement;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -159,7 +159,7 @@
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`ttl`]**: durée de validité du token en secondes;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -229,15 +229,15 @@
 	{
 		"timestamp": 1453903559817,
 		"id": 1,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/create"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`id`]**: id de l'enregistrement;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -312,7 +312,7 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
@@ -325,7 +325,7 @@
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`id`]**: id de l'enregistrement;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1090,7 +1090,7 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
@@ -1103,7 +1103,7 @@
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`id`]**: id de l'enregistrement;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -2116,18 +2116,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/other/moderation/statut/create"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.

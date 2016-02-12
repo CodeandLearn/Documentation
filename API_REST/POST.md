@@ -113,18 +113,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/account/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -183,18 +183,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/account/group/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -263,18 +263,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -333,18 +333,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/moderation/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -401,18 +401,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/correction/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -469,18 +469,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/script/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -539,18 +539,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/script/log/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -613,18 +613,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/grade/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -685,18 +685,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/user/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -755,18 +755,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/user/code/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -827,18 +827,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/comment/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -903,18 +903,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/course/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -973,18 +973,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/course/moderation/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1041,18 +1041,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/course/language/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1113,18 +1113,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/course/commente/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1189,18 +1189,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/blog/post/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1257,18 +1257,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/blog/post/category/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1329,18 +1329,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/blog/post/comment/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1401,18 +1401,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1469,18 +1469,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/categorie/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1543,18 +1543,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/post/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1596,18 +1596,18 @@
 ## [Forum] POST: /forum/post/like/[string:token]
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/post/like"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1649,18 +1649,18 @@
 ## [Forum] POST: /forum/post/likes/[string:token]/[integer:likes]
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/post/likes"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1721,18 +1721,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/subject/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1789,18 +1789,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/other/locale/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1857,18 +1857,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/other/avatar/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1925,18 +1925,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/other/moderation/statut/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.

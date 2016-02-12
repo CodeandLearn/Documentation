@@ -1,7 +1,6 @@
 # Codes
 ## Succès
 * **200**: Requête traitée avec succès;
-* **204**: Requête traitée avec succès mais pas d'information à renvoyer.
 
 ## Erreurs client / serveur
 * **400**: La syntaxe de la requête est erronée;
@@ -33,23 +32,6 @@
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 200;
-* **[string:`error`]**: message d'erreur généralisé;
-* **[string:`message`]**: message d'erreur plus détaillé;
-* **[string:`path`]**: chemin de la requête.
-
-## [204] Requête traitée avec succès mais pas d'information à renvoyer
-***
-```
-	{
-		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
-		"message": "...",
-		"path": "/"
-	}
-```
-* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
