@@ -178,8 +178,8 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 600,
-		"error": "...",
-		"message": "...",
+		"error": "Http Status 600",
+		"message": "Already exists",
 		"path": "/"
 	}
 ```
@@ -195,8 +195,8 @@
 	{
 		"timestamp": 1453903559817,
 		"status": 700,
-		"error": "...",
-		"message": "...",
+		"error": "Http Status 700",
+		"message": "Banned user",
 		"path": "/"
 	}
 ```
