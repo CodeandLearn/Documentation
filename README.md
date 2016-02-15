@@ -1,6 +1,5 @@
 # Documentations
-
-### API RESTful
+## API RESTful
 * [GET](./API_REST/GET.md)
 * [POST](./API_REST/POST.md)
 * [PUT](./API_REST/PUT.md)

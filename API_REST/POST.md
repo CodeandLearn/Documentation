@@ -6,6 +6,7 @@
 #### Connexion réussit
 ```
 	{
+		"timestamp": 1453903559817,
 		"token": "0123456789ABCDEF",
 		"ttl": 3600,
 		"status": 200,
@@ -14,6 +15,7 @@
 		"path": "/login"
 	}
 ```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[string:`token`]**: renvoie token de la session en cours;
 * **[integer:`ttl`]**: renvoie le temps restant de la session en cours, temps en secondes;
 * **[integer:`status`]**: code 200;
@@ -24,6 +26,7 @@
 #### Ressource non trouvée
 ```
 	{
+		"timestamp": 1453903559817,
 		"attempts": 1,
 		"max_attemps": 3,
 		"cooldown": 3600,
@@ -33,6 +36,7 @@
 		"path": "/login"
 	}
 ```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`attempts`]**: nombre de tentatives de connexion;
 * **[integer:`max_attempts`]**: nombre maximum de tentatives;
 * **[integer:`coldown`]**: temps avant que le nombre de tentatives se remette à 0, temps en secondes;
@@ -44,6 +48,7 @@
 #### Le client a émis trop de requêtes dans un délai donné
 ```
     {
+		"timestamp": 1453903559817,
         "attempts": 3,
 		"max_attemps": 3,
         "ban_duration": 36000,
@@ -53,6 +58,7 @@
 		"path": "/login"
     }
 ```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`attempts`]**: nombre de tentatives réalisés, se référer à `max_attempts`;
 * **[integer:`max_attempts`]**: nombre maximum de tentatives;
 * **[integer:`ban_duration`]**: temps avant d'autoriser à nouveau à l'utilisateur de se connecter, temps en secondes;
@@ -64,6 +70,7 @@
 #### Utilisateur banni
 ```
     {
+		"timestamp": 1453903559817,
         "login_ban_duration_end": 3600,
         "status": 700,
 		"error": "...",
@@ -71,6 +78,7 @@
 		"path": "/login"
     }
 ```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`login_ban_duration_end`]**: temps restant que l'utilisateur est banni, temps en secondes;
 * **[integer:`status`]**: code 700;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -105,18 +113,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/account/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -140,7 +148,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -148,7 +155,6 @@
 		"path": "/account/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -177,18 +183,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/account/group/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -212,7 +218,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -220,7 +225,6 @@
 		"path": "/account/group/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -259,18 +263,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -294,7 +298,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -302,7 +305,6 @@
 		"path": "/exercise/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -326,22 +328,23 @@
 * @NOT NULL **[integer:`exercice_id`]**: id de modération de l'exercice à modifier;
 * **[integer:`moderation_validate_id`]**: id du statut de modération;
 * **[string:`commentary`]**: commentaire relatif à la modération.
+
 ***
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/moderation/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -365,7 +368,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -373,7 +375,6 @@
 		"path": "/exercise/moderation/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -400,18 +401,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/correction/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -435,7 +436,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -443,7 +443,6 @@
 		"path": "/exercise/correction/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -470,18 +469,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/script/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -505,7 +504,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -513,7 +511,6 @@
 		"path": "/exercise/script/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -542,18 +539,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/script/log/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -577,7 +574,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -585,7 +581,6 @@
 		"path": "/exercise/script/log/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -618,18 +613,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/grade/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -653,7 +648,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -661,7 +655,6 @@
 		"path": "/exercise/grade/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -692,18 +685,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/user/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -727,7 +720,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -735,7 +727,6 @@
 		"path": "/exercise/user/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -764,18 +755,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/user/code/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -799,7 +790,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -807,7 +797,6 @@
 		"path": "/exercise/user/code/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -838,18 +827,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/exercise/comment/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -873,7 +862,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -881,7 +869,6 @@
 		"path": "/exercise/comment/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -916,18 +903,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/course/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -951,7 +938,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -959,7 +945,6 @@
 		"path": "/course/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -968,7 +953,7 @@
 
 ***
 
-## [Cour] POST [JSON RAW]: /course/moderation
+## [Cour] POST [JSON RAW]: /course/moderation/modify
 ***
 ### Envoi
 ```
@@ -983,22 +968,23 @@
 * @NOT NULL **[integer:`course_id`]**: id du cour;
 * **[integer:`moderation_validate_id`]**: id du statut du cour à modérer;
 * **[string:`commentary`]**: commentaire relatif au cour.
+
 ***
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
-		"path": "/course/moderation"
+		"path": "/course/moderation/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1010,7 +996,7 @@
 		"status": 403,
 		"error": "Forbidden",
 		"message": "...",
-		"path": "/course/moderation"
+		"path": "/course/moderation/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
@@ -1022,15 +1008,13 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
 		"message": "Validation failed for...",
-		"path": "/course/moderation"
+		"path": "/course/moderation/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1057,18 +1041,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/course/language/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1092,7 +1076,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1100,7 +1083,6 @@
 		"path": "/course/language/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1131,18 +1113,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/course/commente/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1166,7 +1148,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1174,7 +1155,6 @@
 		"path": "/course/commente/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1209,18 +1189,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/blog/post/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1244,7 +1224,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1252,7 +1231,6 @@
 		"path": "/blog/post/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1279,18 +1257,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/blog/post/category/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1314,7 +1292,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1322,7 +1299,6 @@
 		"path": "/blog/post/category/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1353,18 +1329,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/blog/post/comment/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1388,7 +1364,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1396,7 +1371,6 @@
 		"path": "/blog/post/comment/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1427,18 +1401,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1462,7 +1436,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1470,7 +1443,6 @@
 		"path": "/forum/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1497,18 +1469,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/categorie/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1532,7 +1504,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1540,7 +1511,6 @@
 		"path": "/forum/categorie/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1573,18 +1543,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/post/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1608,7 +1578,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1616,7 +1585,6 @@
 		"path": "/forum/post/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1628,18 +1596,18 @@
 ## [Forum] POST: /forum/post/like/[string:token]
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/post/like"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1663,7 +1631,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1671,7 +1638,6 @@
 		"path": "/forum/post/like"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1683,18 +1649,18 @@
 ## [Forum] POST: /forum/post/likes/[string:token]/[integer:likes]
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/post/likes"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1718,7 +1684,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1726,7 +1691,6 @@
 		"path": "/forum/post/likes"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1757,18 +1721,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/forum/subject/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1792,7 +1756,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1800,7 +1763,6 @@
 		"path": "/forum/subject/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1827,18 +1789,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
-		"path": "/forum/subject/modify"
+		"path": "/other/locale/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1850,7 +1812,7 @@
 		"status": 403,
 		"error": "Forbidden",
 		"message": "...",
-		"path": "/forum/subject/modify"
+		"path": "/other/locale/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
@@ -1862,15 +1824,13 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
 		"message": "Validation failed for...",
-		"path": "/forum/subject/modify"
+		"path": "/other/locale/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
@@ -1897,18 +1857,18 @@
 
 ### Réception
 ***
-#### Requête traitée avec succès mais pas d'information à renvoyer
+#### Requête traitée avec succès
 ```
 	{
 		"timestamp": 1453903559817,
-		"status": 204,
-		"error": "No Content",
+		"status": 200,
+		"error": "OK",
 		"message": "...",
 		"path": "/other/avatar/modify"
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
-* **[integer:`status`]**: code 204;
+* **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
@@ -1932,7 +1892,6 @@
 #### La syntaxe de la requête est erronée
 ```
 	{
-		"token": "0123456789ABCDEF",
 		"timestamp": 1453903559817,
 		"status": 400,
 		"error": "Bad Request",
@@ -1940,7 +1899,74 @@
 		"path": "/other/avatar/modify"
 	}
 ```
-* **[string:`token`]**: token de la session en cours;
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 400;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
+
+***
+
+## [Autre] POST [JSON RAW]: /other/moderation/statut/modify
+***
+### Envoi
+```
+	{
+		"token": "0123456789ABCDEF",
+		"id": 1,
+		"name": "FR"
+	}
+```
+* @NOT NULL **[string:`token`]**: token de la session en cours;
+* @NOT NULL **[integer:`id`]**: id du statut;
+* **[string:`name`]**: nom du statut.
+
+***
+
+### Réception
+***
+#### Requête traitée avec succès
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 200,
+		"error": "OK",
+		"message": "...",
+		"path": "/other/moderation/statut/modify"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 200;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
+
+#### Le serveur a compris la requête, mais refuse de l'exécuter, permission non accordée
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 403,
+		"error": "Forbidden",
+		"message": "...",
+		"path": "/other/moderation/statut/modify"
+	}
+```
+* **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
+* **[integer:`status`]**: code 403;
+* **[string:`error`]**: message d'erreur généralisé;
+* **[string:`message`]**: message d'erreur plus détaillé;
+* **[string:`path`]**: chemin de la requête.
+
+#### La syntaxe de la requête est erronée
+```
+	{
+		"timestamp": 1453903559817,
+		"status": 400,
+		"error": "Bad Request",
+		"message": "Validation failed for...",
+		"path": "/other/moderation/statut/modify"
+	}
+```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 400;
 * **[string:`error`]**: message d'erreur généralisé;
