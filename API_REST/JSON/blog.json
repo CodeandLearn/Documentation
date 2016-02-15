@@ -1,75 +1,120 @@
 {
-  "articles": [
-    {
-      "id": 0,
-      "title": "Hello World!",
-      "article": "<p>Sample sample sample</p>",
-      "created": 60000,
-      "edited": 0,
-      "tags": [
-        {"id": 0, "tag": "C"},
-        {"id": 1, "tag": "C++"},
-        {"id": 2, "tag": "Python"}
-      ],
-      "author": {
-        "id": 0,
-        "name": "hirsch_b",
-        "picture": {
-          "path": "img/profile_pic/hirsch_b.png",
-          "url": "static.codeandlear.com/img/profile_pic/hirsch_b.png",
-          "size": 21363,
-          "dimensions": {"height": 150, "width": 150}
-        },
-        "social": {
-          "Facebook": {"username": "hirsch_b", "url": "http://facebook.com/hirsch_b"},
-          "Twitter": {"username": "hirsch_b", "url": "http://twitter.com/hirsch_b"},
-          "Google+": {"username": "Benjamin Hirschfield", "url": "http://plug.google.com/+Benjamin_Hirschfield"}
-        }
-      },
-      "language": {
-        "id": 1,
-        "code": "en",
-        "language": "English"
-      }
-    },
-    {
-      "id": 1,
-      "title": "Hey mate",
-      "article": "<p>Mate",
-      "created": 760000,
-      "edited": 0,
-      "tags": [
-        {"id": 0, "tag": "C"},
-        {"id": 2, "tag": "Python"}
-      ],
-      "author": {
-        "id": 0,
-        "name": "hirsch_b",
-        "picture": {
-          "path": "img/profile_pic/hirsch_b.png",
-          "url": "static.codeandlear.com/img/profile_pic/hirsch_b.png",
-          "size": 21363,
-          "dimensions": {"height": 150, "width": 150}
-        },
-        "social": {
-          "Facebook": {"username": "hirsch_b", "url": "http://facebook.com/hirsch_b"},
-          "Twitter": {"username": "hirsch_b", "url": "http://twitter.com/hirsch_b"},
-          "Google+": {"username": "Benjamin Hirschfield", "url": "http://plug.google.com/+Benjamin_Hirschfield"}
-        }
-      },
-      "language": {
-        "id": 1,
-        "code": "en",
-        "language": "English"
-      }
-    }
-  ],
-  "total": 4,
-  "per_page": 3,
-  "page": 2,
-  "language": {
-    "id": 1,
-    "code": "en",
-    "language": "English"
-  }
+	"articles": [
+		{
+			"id": 0,
+			"title": "Hello World!",
+			"article": "<p>Sample sample sample</p>",
+			"created": 60000,
+			"edited": 0,
+			"tags": [
+				{"id": 0, "tag": "C"},
+				{"id": 1, "tag": "C++"},
+				{"id": 2, "tag": "Python"}
+			],
+			"author": {
+				"id": 0,
+				"name": "hirsch_b",
+				"picture": {
+					"path": "img/profile_pic/hirsch_b.png",
+					"url": "static.codeandlear.com/img/profile_pic/hirsch_b.png",
+					"size": 21363,
+					"dimensions": {"height": 150, "width": 150}
+				},
+				"social": {
+					"Facebook": {"username": "hirsch_b", "url": "http://facebook.com/hirsch_b"},
+					"Twitter": {"username": "hirsch_b", "url": "http://twitter.com/hirsch_b"},
+					"Google+": {"username": "Benjamin Hirschfield", "url": "http://plug.google.com/+Benjamin_Hirschfield"}
+				}
+			},
+			"language": {
+				"id": 1,
+				"code": "en",
+				"language": "English"
+			},
+			"comments": [
+				{
+					"id": 0,
+					"author": {
+						"id": 0,
+						"name": "hirsch_b",
+						"picture": {
+							"path": "img/profile_pic/hirsch_b.png",
+							"url": "static.codeandlear.com/img/profile_pic/hirsch_b.png",
+							"size": 21363,
+							"dimensions": {"height": 150, "width": 150}
+						},
+						"social": {
+							"Facebook": {"username": "hirsch_b", "url": "http://facebook.com/hirsch_b"},
+							"Twitter": {"username": "hirsch_b", "url": "http://twitter.com/hirsch_b"},
+							"Google+": {"username": "Benjamin Hirschfield", "url": "http://plug.google.com/+Benjamin_Hirschfield"}
+						}
+					}
+					"comment": "That's great mate.",
+					"created": 2344512,
+					"edited": 0
+				},
+				{
+					"id": 1,
+					"author": {
+						"id": 0,
+						"name": "hirsch_b",
+						"picture": {
+							"path": "img/profile_pic/hirsch_b.png",
+							"url": "static.codeandlear.com/img/profile_pic/hirsch_b.png",
+							"size": 21363,
+							"dimensions": {"height": 150, "width": 150}
+						},
+						"social": {
+							"Facebook": {"username": "hirsch_b", "url": "http://facebook.com/hirsch_b"},
+							"Twitter": {"username": "hirsch_b", "url": "http://twitter.com/hirsch_b"},
+							"Google+": {"username": "Benjamin Hirschfield", "url": "http://plug.google.com/+Benjamin_Hirschfield"}
+						}
+					}
+					"comment": "That's great mate.",
+					"created": 23445129,
+					"edited": 0
+				}
+			]
+		},
+		{
+			"id": 1,
+			"title": "Hey mate",
+			"article": "<p>Mate",
+			"created": 760000,
+			"edited": 0,
+			"tags": [
+				{"id": 0, "tag": "C"},
+				{"id": 2, "tag": "Python"}
+			],
+			"author": {
+				"id": 0,
+				"name": "hirsch_b",
+				"picture": {
+					"path": "img/profile_pic/hirsch_b.png",
+					"url": "static.codeandlear.com/img/profile_pic/hirsch_b.png",
+					"size": 21363,
+					"dimensions": {"height": 150, "width": 150}
+				},
+				"social": {
+					"Facebook": {"username": "hirsch_b", "url": "http://facebook.com/hirsch_b"},
+					"Twitter": {"username": "hirsch_b", "url": "http://twitter.com/hirsch_b"},
+					"Google+": {"username": "Benjamin Hirschfield", "url": "http://plug.google.com/+Benjamin_Hirschfield"}
+				}
+			},
+			"language": {
+				"id": 1,
+				"code": "en",
+				"language": "English"
+			}
+			"comments": []
+		}
+	],
+	"total": 4,
+	"per_page": 3,
+	"page": 2,
+	"language": {
+		"id": 1,
+		"code": "en",
+		"language": "English"
+	}
 }
