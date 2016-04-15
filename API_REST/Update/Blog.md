@@ -1082,7 +1082,6 @@ JSON à envoyer :
 JSON à envoyer :
 ```
 {
-	"account_id": 1,
     "blog_post_id": 1,
     "content": "contenue d'un commentaire"
 }
@@ -1110,7 +1109,6 @@ JSON à envoyer :
 JSON à envoyer :
 ```
 {
-	"account_id": 1,
     "blog_post_id": 1,
     "content": "contenue d'un commentaire modifié"
 }
