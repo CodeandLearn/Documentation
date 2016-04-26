@@ -23,7 +23,7 @@
 * **[string:`message`]**: message d'erreur plus détaillé;
 * **[string:`path`]**: chemin de la requête.
 
-#### Ressource non trouvée
+#### Ressource non trouvée (modification avenir avec le module de spring)
 ```
 	{
 		"timestamp": 1453903559817,
