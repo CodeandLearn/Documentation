@@ -27,14 +27,16 @@
 		"status": 200,
 		"error": "OK",
 		"message": "...",
-		"path": "/"
+		"path": "/",
+		"data": []
 	}
 ```
 * **[integer:`timestamp`]**: timestamp au moment de l'exécution de la requête;
 * **[integer:`status`]**: code 200;
 * **[string:`error`]**: message d'erreur généralisé;
 * **[string:`message`]**: message d'erreur plus détaillé;
-* **[string:`path`]**: chemin de la requête.
+* **[string:`path`]**: chemin de la requête;
+* **[array:`data`]**: données récupérés.
 
 ## [400] La syntaxe de la requête est erronée
 ***
