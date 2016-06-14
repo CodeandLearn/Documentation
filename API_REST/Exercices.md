@@ -1,0 +1,409 @@
+# Objects
+
+## GET Methods
+
+### /exercises
+
+Cette methode permet de recuperer la liste d'exercices
+
+```
+{
+  "path": "/exercises",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "course_id": 1,
+      "account_id": 12,
+      "instruction": "FUCK IT ALL",
+      "grade_max": 0,
+      "id": 1,
+      "title": "COUCOU"
+    },
+    {
+      "course_id": 1,
+      "account_id": 12,
+      "instruction": "FUCK qsdqsdIT ALL",
+      "grade_max": 0,
+      "id": 3,
+      "title": "jeej"
+    },
+    {
+      "course_id": 1,
+      "account_id": 12,
+      "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
+      "grade_max": 20,
+      "id": 4,
+      "title": "Test POST exercie"
+    }
+  ],
+  "error": "OK",
+  "timestamp": 1465817342774
+}
+```
+
+### /exercise/course/{course_id}
+
+Cette methode permet de recuperer la liste d'exercices liée au cours passé en paramétre
+
+JSON type sur succès
+
+```
+{
+  "path": "/exercise/course/{course_id}",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "course_id": 1,
+      "account_id": 12,
+      "instruction": "FUCK IT ALL",
+      "grade_max": 0,
+      "id": 1,
+      "title": "COUCOU"
+    },
+    {
+      "course_id": 1,
+      "account_id": 12,
+      "instruction": "FUCK qsdqsdIT ALL",
+      "grade_max": 0,
+      "id": 3,
+      "title": "jeej"
+    }
+  ],
+  "error": "OK",
+  "timestamp": 1465815932513
+}
+```
+
+### /exercise/{id}
+
+Cette methode permet de recuperer un exercice par son ID
+
+JSON type sur succès
+
+```
+{
+  "path": "/exercise/{id}",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "course_id": 1,
+      "account_id": 12,
+      "instruction": "FUCK IT ALL",
+      "grade_max": 0,
+      "id": 1,
+      "title": "COUCOU"
+    }
+  ],
+  "error": "OK",
+  "timestamp": 1465816065661
+}
+```
+
+### /exercise/{exercise_id}/script
+
+Cette methode permet de recuperer le script de correction lié à l'exercice parametre
+
+JSON type sur succès
+
+```
+{
+  "path": "/exercise/{exercise_id}/script",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "create_timestamp": 1465768973254,
+      "exercise_id": 1,
+      "modify_timestamp": 1465768973254,
+      "id": 1,
+      "content": "Nothing"
+    }
+  ],
+  "error": "OK",
+  "timestamp": 1465815847185
+}
+```
+
+### /exercise/{exercise_id}/correction
+
+Cette methode permet de recuperer la correction lié à l'exercice parametre
+
+JSON type sur succès
+
+```
+{
+  "path": "/exercise/{exercise_id}/correction",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "exercise_id": 1,
+      "id": 1,
+      "content": "Nothing",
+      "timestamp": 0
+    }
+  ],
+  "error": "OK",
+  "timestamp": 1465816493962
+}
+```
+
+### /exercise/{exercise_id}/comments
+
+Cette methode permet de recuperer les commentaires lié à l'exercice parametre
+
+JSON type sur succès
+
+```
+{
+  "path": "/exercise/{exercise_id}/comments",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "account_id": 12,
+      "create_timestamp": 1465769713322,
+      "exercise_id": 1,
+      "modify_timestamp": 1465769713322,
+      "id": 1,
+      "content": "Pouet"
+    }
+  ],
+  "error": "OK",
+  "timestamp": 1465816467612
+}
+```
+
+### /exercise/{exercise_id}/moderation
+
+Cette methode permet de recuperer l'etat de moderation lié à l'exercice parametre
+
+JSON type sur succès
+
+```
+{{
+  "path": "/exercise/{exercise_id}/moderation",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "exercise_id": 1,
+      "moderation_validate_id": 1,
+      "commentary": "Nothing"
+    }
+  ],
+  "error": "OK",
+  "timestamp": 1465816481464
+}
+```
+
+## POST Methods
+
+### Succès type
+
+```
+{
+  "path": "{Path}",
+  "code": 200,
+  "method": "POST",
+  "error": "OK",
+  "timestamp": 1465916194498
+}
+```
+
+### /exercise
+
+Insert un exercice dans la base de données
+
+JSON Body
+
+```
+{
+    "course_id": 1,
+    "account_id": 12,
+    "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
+    "grade_max": 20,
+    "title": "Test POST exercie"
+}
+```
+
+### /exercise/script
+
+Insert un script dans la base de données
+
+JSON Body
+
+```
+{
+    "course_id": 1,
+    "account_id": 12,
+    "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
+    "grade_max": 20,
+    "title": "Test POST exercie"
+}
+```
+
+### /exercise/comment
+
+Insert un exercice_comment dans la base de données
+
+JSON Body
+
+```
+{
+  "account_id": 12,
+  "create_timestamp": 1465769713322,
+  "exercise_id": 1,
+  "modify_timestamp": 1465769713322,
+  "content": "Cool Stuff"
+}
+```
+
+### /exercise/correction
+
+Insert une correction dans la base de données
+
+JSON Body
+
+```
+{
+  "exercise_id": 1,
+  "content": "Correction for the Exercise goes there",
+  "timestamp": 1465769713322
+}
+```
+
+### /exercise/moderation
+
+Insert une entree de moderation dans la base de données
+
+JSON Body
+
+```
+{
+  "exercise_id": 1,
+  "moderation_validate_id": 1,
+  "commentary": "commentary goes there"
+}
+```
+
+## PUT Methods
+
+### Succès type
+
+```
+{
+  "path": "{Path}",
+  "code": 200,
+  "method": "PUT",
+  "error": "OK",
+  "timestamp": 1465916194498
+}
+```
+
+### /exercise/{exercise_id}
+
+Modifie un exercice dans la base de données
+
+JSON Body
+
+```
+{
+    "id": 1,
+    "course_id": 1,
+    "account_id": 12,
+    "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
+    "grade_max": 20,
+    "title": "Test POST exercie"
+}
+```
+
+### /exercise/script/{script_id}
+
+Modifie un script dans la base de données
+
+JSON Body
+
+```
+{
+    "id": 1,
+    "course_id": 1,
+    "account_id": 12,
+    "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
+    "grade_max": 20,
+    "title": "Test POST exercie"
+}
+```
+
+### /exercise/comment/{comment_id}
+
+Modifie un exercice_comment dans la base de données
+
+JSON Body
+
+```
+{
+  "id": 1,
+  "account_id": 12,
+  "create_timestamp": 1465769713322,
+  "exercise_id": 1,
+  "modify_timestamp": 1465769713322,
+  "content": "Cool Stuff"
+}
+```
+
+### /exercise/correction/{correction_id}
+
+Modifie une correction dans la base de données
+
+JSON Body
+
+```
+{
+  "id": 1,
+  "exercise_id": 1,
+  "content": "Correction for the Exercise goes there",
+  "timestamp": 1465769713322
+}
+```
+
+### /exercise/moderation/{exercise_id}
+
+Modifie une entree de moderation dans la base de données
+
+JSON Body
+
+```
+{
+  "exercise_id": 1,
+  "moderation_validate_id": 1,
+  "commentary": "commentary goes there"
+}
+```
+
+## DELETE Methods
+
+### Succès type
+
+```
+{
+  "path": "{Path}",
+  "code": 200,
+  "method": "DELETE",
+  "error": "OK",
+  "timestamp": 1465916194498
+}
+```
+
+### /exercise/{id}
+
+### /exercise/script/{script_id}
+
+### /exercise/correction/{correction_id}
+
+### /exercise/comments/{comment_id}
+
+### /exercise/moderation/{exercise_id}
