@@ -325,7 +325,7 @@ JSON Body
 {
     "id": 1,
     "exercise_id": 1,
-    "content": "Correction for the Exercise goes there",
+    "content": "Correction for the Exercise goes there"
 }
 ```
 
@@ -354,7 +354,7 @@ JSON Body
 {
   "id": 1,
   "exercise_id": 1,
-  "content": "Correction for the Exercise goes there",
+  "content": "Correction for the Exercise goes there"
 }
 ```
 
