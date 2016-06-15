@@ -238,11 +238,8 @@ JSON Body
 
 ```
 {
-    "course_id": 1,
-    "account_id": 12,
-    "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
-    "grade_max": 20,
-    "title": "Test POST exercie"
+    "exercise_id": 1,
+    "content": "Verifie l'exercice",
 }
 ```
 
@@ -255,9 +252,7 @@ JSON Body
 ```
 {
   "account_id": 12,
-  "create_timestamp": 1465769713322,
   "exercise_id": 1,
-  "modify_timestamp": 1465769713322,
   "content": "Cool Stuff"
 }
 ```
@@ -272,7 +267,6 @@ JSON Body
 {
   "exercise_id": 1,
   "content": "Correction for the Exercise goes there",
-  "timestamp": 1465769713322
 }
 ```
 
@@ -330,11 +324,8 @@ JSON Body
 ```
 {
     "id": 1,
-    "course_id": 1,
-    "account_id": 12,
-    "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
-    "grade_max": 20,
-    "title": "Test POST exercie"
+    "exercise_id": 1,
+    "content": "Correction for the Exercise goes there",
 }
 ```
 
@@ -348,9 +339,7 @@ JSON Body
 {
   "id": 1,
   "account_id": 12,
-  "create_timestamp": 1465769713322,
   "exercise_id": 1,
-  "modify_timestamp": 1465769713322,
   "content": "Cool Stuff"
 }
 ```
@@ -366,7 +355,6 @@ JSON Body
   "id": 1,
   "exercise_id": 1,
   "content": "Correction for the Exercise goes there",
-  "timestamp": 1465769713322
 }
 ```
 
