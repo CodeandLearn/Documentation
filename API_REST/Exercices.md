@@ -239,7 +239,7 @@ JSON Body
 ```
 {
     "exercise_id": 1,
-    "content": "Verifie l'exercice",
+    "content": "Verifie l'exercice"
 }
 ```
 
@@ -266,7 +266,7 @@ JSON Body
 ```
 {
   "exercise_id": 1,
-  "content": "Correction for the Exercise goes there",
+  "content": "Correction for the Exercise goes there"
 }
 ```
 
