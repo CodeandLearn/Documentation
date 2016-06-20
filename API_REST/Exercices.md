@@ -15,7 +15,7 @@ Cette methode permet de recuperer la liste d'exercices
     {
       "course_id": 1,
       "account_id": 12,
-      "instruction": "FUCK IT ALL",
+      "instruction": "Hello World!",
       "grade_max": 0,
       "id": 1,
       "title": "COUCOU"
@@ -23,7 +23,7 @@ Cette methode permet de recuperer la liste d'exercices
     {
       "course_id": 1,
       "account_id": 12,
-      "instruction": "FUCK qsdqsdIT ALL",
+      "instruction": "Hello Dave",
       "grade_max": 0,
       "id": 3,
       "title": "jeej"
@@ -57,7 +57,7 @@ JSON type sur succès
     {
       "course_id": 1,
       "account_id": 12,
-      "instruction": "FUCK IT ALL",
+      "instruction": "Hello World!",
       "grade_max": 0,
       "id": 1,
       "title": "COUCOU"
@@ -65,7 +65,7 @@ JSON type sur succès
     {
       "course_id": 1,
       "account_id": 12,
-      "instruction": "FUCK qsdqsdIT ALL",
+      "instruction": "Hello Dave!",
       "grade_max": 0,
       "id": 3,
       "title": "jeej"
@@ -91,7 +91,7 @@ JSON type sur succès
     {
       "course_id": 1,
       "account_id": 12,
-      "instruction": "FUCK IT ALL",
+      "instruction": "Hello World!",
       "grade_max": 0,
       "id": 1,
       "title": "COUCOU"
