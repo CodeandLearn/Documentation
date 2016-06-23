@@ -102,7 +102,7 @@ JSON type sur succès
 }
 ```
 
-### /exercise/{exercise_id}/script
+### /exercise/{exercice_id}/script
 
 Cette methode permet de recuperer le script de correction lié à l'exercice parametre
 
@@ -110,13 +110,13 @@ JSON type sur succès
 
 ```
 {
-  "path": "/exercise/{exercise_id}/script",
+  "path": "/exercise/{exercice_id}/script",
   "code": 200,
   "method": "GET",
   "data": [
     {
       "create_timestamp": 1465768973254,
-      "exercise_id": 1,
+      "exercice_id": 1,
       "modify_timestamp": 1465768973254,
       "id": 1,
       "content": "Nothing"
@@ -127,7 +127,7 @@ JSON type sur succès
 }
 ```
 
-### /exercise/{exercise_id}/correction
+### /exercise/{exercice_id}/correction
 
 Cette methode permet de recuperer la correction lié à l'exercice parametre
 
@@ -135,12 +135,12 @@ JSON type sur succès
 
 ```
 {
-  "path": "/exercise/{exercise_id}/correction",
+  "path": "/exercise/{exercice_id}/correction",
   "code": 200,
   "method": "GET",
   "data": [
     {
-      "exercise_id": 1,
+      "exercice_id": 1,
       "id": 1,
       "content": "Nothing",
       "timestamp": 0
@@ -151,7 +151,7 @@ JSON type sur succès
 }
 ```
 
-### /exercise/{exercise_id}/comments
+### /exercise/{exercice_id}/comments
 
 Cette methode permet de recuperer les commentaires lié à l'exercice parametre
 
@@ -159,14 +159,14 @@ JSON type sur succès
 
 ```
 {
-  "path": "/exercise/{exercise_id}/comments",
+  "path": "/exercise/{exercice_id}/comments",
   "code": 200,
   "method": "GET",
   "data": [
     {
       "account_id": 12,
       "create_timestamp": 1465769713322,
-      "exercise_id": 1,
+      "exercice_id": 1,
       "modify_timestamp": 1465769713322,
       "id": 1,
       "content": "Pouet"
@@ -177,7 +177,7 @@ JSON type sur succès
 }
 ```
 
-### /exercise/{exercise_id}/moderation
+### /exercise/{exercice_id}/moderation
 
 Cette methode permet de recuperer l'etat de moderation lié à l'exercice parametre
 
@@ -185,12 +185,12 @@ JSON type sur succès
 
 ```
 {{
-  "path": "/exercise/{exercise_id}/moderation",
+  "path": "/exercise/{exercice_id}/moderation",
   "code": 200,
   "method": "GET",
   "data": [
     {
-      "exercise_id": 1,
+      "exercice_id": 1,
       "moderation_validate_id": 1,
       "commentary": "Nothing"
     }
@@ -238,7 +238,7 @@ JSON Body
 
 ```
 {
-    "exercise_id": 1,
+    "exercice_id": 1,
     "content": "Verifie l'exercice"
 }
 ```
@@ -252,7 +252,7 @@ JSON Body
 ```
 {
   "account_id": 12,
-  "exercise_id": 1,
+  "exercice_id": 1,
   "content": "Cool Stuff"
 }
 ```
@@ -265,7 +265,7 @@ JSON Body
 
 ```
 {
-  "exercise_id": 1,
+  "exercice_id": 1,
   "content": "Correction for the Exercise goes there"
 }
 ```
@@ -278,7 +278,7 @@ JSON Body
 
 ```
 {
-  "exercise_id": 1,
+  "exercice_id": 1,
   "moderation_validate_id": 1,
   "commentary": "commentary goes there"
 }
@@ -298,7 +298,7 @@ JSON Body
 }
 ```
 
-### /exercise/{exercise_id}
+### /exercise/{exercice_id}
 
 Modifie un exercice dans la base de données
 
@@ -324,7 +324,7 @@ JSON Body
 ```
 {
     "id": 1,
-    "exercise_id": 1,
+    "exercice_id": 1,
     "content": "Correction for the Exercise goes there"
 }
 ```
@@ -339,7 +339,7 @@ JSON Body
 {
   "id": 1,
   "account_id": 12,
-  "exercise_id": 1,
+  "exercice_id": 1,
   "content": "Cool Stuff"
 }
 ```
@@ -353,12 +353,12 @@ JSON Body
 ```
 {
   "id": 1,
-  "exercise_id": 1,
+  "exercice_id": 1,
   "content": "Correction for the Exercise goes there"
 }
 ```
 
-### /exercise/moderation/{exercise_id}
+### /exercise/moderation/{exercice_id}
 
 Modifie une entree de moderation dans la base de données
 
@@ -366,7 +366,7 @@ JSON Body
 
 ```
 {
-  "exercise_id": 1,
+  "exercice_id": 1,
   "moderation_validate_id": 1,
   "commentary": "commentary goes there"
 }
@@ -394,4 +394,4 @@ JSON Body
 
 ### /exercise/comments/{comment_id}
 
-### /exercise/moderation/{exercise_id}
+### /exercise/moderation/{exercice_id}
