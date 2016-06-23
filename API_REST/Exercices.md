@@ -1,4 +1,61 @@
-# Objects
+### Objects
+
+## Exercice
+
+Entite contenant les informations de bases de l'exercice
+
+```
+{
+  "course_id": 1,                 ==> Cours lie a l'exercice
+  "account_id": 12,               ==> Auteur
+  "instruction": "Hello World!",  ==> Instructions
+  "grade_max": 0,                 ==> note maximale
+  "id": 1,                        ==> id
+  "title": "COUCOU"               ==> Titre
+}
+```
+
+## Script
+
+Script permettant d'executer et de verifier le code utilisateur
+```
+{
+  "create_timestamp": 1465768973254,    ==> date de creation
+  "exercice_id": 1,                     ==> Exercice lie au script
+  "modify_timestamp": 1465768973254,    ==> date de derniere modification
+  "id": 1,
+  "content": "Nothing"                  ==> Contenu du script
+}
+```
+
+## Correction
+
+Sers de conteneur pour le code contenant la solution de l'exercice
+```
+{
+  "exercice_id": 1,
+  "id": 1,
+  "content": "Nothing",
+  "timestamp": 0
+}
+```
+
+## Comment
+
+Commentaires
+```
+{
+  {
+    "account_id": 12,
+    "create_timestamp": 1465769713322,
+    "exercice_id": 1,
+    "modify_timestamp": 1465769713322,
+    "id": 1,
+    "content": "Cool Stuff"
+  }
+}
+```
+
 
 ## GET Methods
 
@@ -169,7 +226,7 @@ JSON type sur succès
       "exercice_id": 1,
       "modify_timestamp": 1465769713322,
       "id": 1,
-      "content": "Pouet"
+      "content": "Cool Stuff"
     }
   ],
   "error": "OK",
