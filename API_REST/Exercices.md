@@ -56,7 +56,6 @@ Commentaires
 }
 ```
 
-
 ## GET Methods
 
 ### /exercises
@@ -266,6 +265,7 @@ JSON type sur succès
   "path": "{Path}",
   "code": 200,
   "method": "POST",
+  "id": 1,                    ==> Identite de l'objet insere
   "error": "OK",
   "timestamp": 1465916194498
 }
