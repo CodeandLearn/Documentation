@@ -118,10 +118,98 @@ Ajoute une entree
 }
 ```
 
+### Code
+
+Ajoute un fichier de code
+
+```
+{
+  "user_exercice_id": 2,
+  "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
+  "name": "file.txt"
+}
+```
+
+### Grade
+
+Ajoute une note
+
+```
+{
+  "user_exercice_id": 1,
+  "value": 10
+}
+```
+
+### Log
+Ajoute un log d'execution
+
+```
+{
+  "user_exercice_id": 1,
+  "content": "test"
+}
+```
 
 #### Put Methods
 
+### user_exercise/
+
+Modifie une entree
+
+```
+{
+  "id": 1,
+  "account_id": 12,
+  "exercice_id": 1
+}
+```
+
+### Code
+
+Modifie un fichier de code
+
+```
+{
+  "id": 1,
+  "user_exercice_id": 2,
+  "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
+  "name": "file.txt"
+}
+```
+
+### Grade
+
+Modifie une note
+
+```
+{
+  "id": 1,
+  "user_exercice_id": 1,
+  "value": 10
+}
+```
+
+### Log
+
+Modifie un log d'execution
+
+```
+{
+  "id": 1,
+  "user_exercice_id": 1,
+  "content": "test"
+}
+```
+
 ### user_exercise/{id}
+
+### Code/{id}
+
+### Grade/{id}
+
+### Log/{id}
+
 
 Ajoute une entree
 
