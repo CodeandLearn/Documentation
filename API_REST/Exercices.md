@@ -240,7 +240,7 @@ Cette methode permet de recuperer l'etat de moderation lié à l'exercice parame
 JSON type sur succès
 
 ```
-{{
+{
   "path": "/exercise/{exercice_id}/moderation",
   "code": 200,
   "method": "GET",

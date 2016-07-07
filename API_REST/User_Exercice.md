@@ -122,16 +122,6 @@ Ajoute une entree
 #### Put Methods
 
 ### user_exercise/{id}
-
-Ajoute une entree
-
-```
-{
-  "account_id": 12,
-  "exercice_id": 1,
-  "id" = 1
-}
-```
 ### Succès type
 
 ```
@@ -141,6 +131,15 @@ Ajoute une entree
   "method": "PUT",
   "error": "OK",
   "timestamp": 1465916194498
+}
+```
+Modifie une entree
+
+```
+{
+  "account_id": 12,
+  "exercice_id": 1,
+  "id" = 1
 }
 ```
 
