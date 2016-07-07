@@ -91,6 +91,11 @@ Returns the user_exercise object linked to the connected user pointing to the ex
   "timestamp": 1466865926781
 }
 ```
+### user_exercise/{id}/log
+
+### user_exercise/{id}/codes
+
+### user_exercise/{id}/grade
 
 
 #### Post Methods
@@ -118,12 +123,40 @@ Ajoute une entree
 }
 ```
 
+### user_exercise/code/
+
+Ajoute un fichier de code
+
+```
+{
+  "user_exercice_id": 2,
+  "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
+  "name": "file.txt"
+}
+```
+
+### user_exercise/grade
+
+Ajoute une note
+
+```
+{
+  "user_exercice_id": 1,
+  "value": 10
+}
+```
+
+### user_exercise/log
+Ajoute un log d'execution
+
+```
+{
+  "user_exercice_id": 1,
+  "content": "test"
+}
+```
 
 #### Put Methods
-
-### user_exercise/{id}
-### Succès type
-
 ```
 {
   "path": "{Path}",
@@ -133,13 +166,54 @@ Ajoute une entree
   "timestamp": 1465916194498
 }
 ```
+
+
+### user_exercise/user_exercise/{id}
+
 Modifie une entree
 
 ```
 {
+  "id": 1,
   "account_id": 12,
-  "exercice_id": 1,
-  "id" = 1
+  "exercice_id": 1
+}
+```
+
+### user_exercise/code/{id}
+
+Modifie un fichier de code
+
+```
+{
+  "id": 1,
+  "user_exercice_id": 2,
+  "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
+  "name": "file.txt"
+}
+```
+
+### user_exercise/grade/{id}
+
+Modifie une note
+
+```
+{
+  "id": 1,
+  "user_exercice_id": 1,
+  "value": 10
+}
+```
+
+### user_exercise/log/{id}
+
+Modifie un log d'execution
+
+```
+{
+  "id": 1,
+  "user_exercice_id": 1,
+  "content": "test"
 }
 ```
 
