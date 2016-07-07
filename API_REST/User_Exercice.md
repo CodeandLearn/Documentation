@@ -19,7 +19,6 @@
   "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
   "name": "file.txt"
 }
-
 ```
 
 ### Grade
