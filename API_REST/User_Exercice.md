@@ -92,11 +92,34 @@ Returns the user_exercise object linked to the connected user pointing to the ex
 }
 ```
 ### user_exercise/{id}/log
-
+```
+{
+  "user_exercice_id": 1,
+  "id": 2,
+  "content": "test",
+  "timestamp": 1465981262675
+}
+```
 ### user_exercise/{id}/codes
-
+```
+{
+  "create_timestamp": 1465981217540,
+  "user_exercice_id": 2,
+  "modify_timestamp": 1465981217540,
+  "id": 2,
+  "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
+  "name": "file.txt"
+}
+```
 ### user_exercise/{id}/grade
-
+```
+{
+  "user_exercice_id": 1,
+  "id": 2,
+  "value": 10,
+  "timestamp": 1465981188313
+}
+```
 
 #### Post Methods
 
