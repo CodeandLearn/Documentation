@@ -1,0 +1,350 @@
+<p><div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#priorités">Priorités</a></li>
+<li><a href="#glossaire">Glossaire</a></li>
+<li><a href="#erreurs-communes">Erreurs communes</a></li>
+<li><a href="#get-exercises">GET /exercises</a></li>
+<li><a href="#get-exerciseid">GET /exercise/{id}</a></li>
+<li><a href="#get-exerciseidscript">GET /exercise/{id}/script</a></li>
+<li><a href="#get-exerciseidmoderation">GET /exercise/{id}/moderation</a></li>
+<li><a href="#post-exercise">POST /exercise</a></li>
+<li><a href="#post-exercisemoderation">POST /exercise/moderation</a></li>
+<li><a href="#put-exerciseid">PUT /exercise/{id}</a></li>
+<li><a href="#delete-exerciseid">DELETE /exercise/{id}</a></li>
+<li><a href="#exercisecorrection">/exercise/correction</a></li>
+<li><a href="#exercisecomment">/exercise/comment</a></li>
+</ul>
+</div>
+</p>
+
+
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Après avoir utilisé l’API pour les exercices il est nécessaire de repasser sur de nombreux aspects de la partie exercices et utilisateur pour la rendre fonctionnelle et agréable à utiliser avec le frontend.</p>
+
+<p>Je proposerais ci-dessous des changements qui vont améliorer l’expérience utilisateur et le développement du frontend et des applications mobiles.</p>
+
+<p>Dans les objets JSON je ne couvrirais que la partie <code>data</code> afin de ne pas être redondant. Certains objets comme l’objets <code>account</code> seront abrégé car ils existent déjà sous la forme désiré sur d’autres parties.</p>
+
+<p>Cette documentation est basé sur la révision <a href="https://gitlab.com/CodeandLearn/Doc/tree/b2f1d205cda7479d1c8ea75c66e6e02ef211c71f/API_REST">b2f1d205</a>.</p>
+
+<h1 id="priorités">Priorités</h1>
+
+<p>La liste ci dessous est ordonnée de l’élément le plus important vers l’élément le moins important.</p>
+
+<ol>
+<li>a </li>
+<li>a</li>
+</ol>
+
+
+
+<h1 id="glossaire">Glossaire</h1>
+
+<ul>
+<li><strong>Programme model</strong>: C’est le programme sur lequelle la correction se basera pour définir si l’exercice a été correctement réalisé ou pas par l’utilisateur.</li>
+<li><strong>Réaliser</strong>: Lorsqu’un utilisateur <em>réalise</em> un exercice on peut dire que c’est un simple utilisateur qui souhaite tester ses connaissances et être noté.</li>
+</ul>
+
+
+
+<h1 id="erreurs-communes">Erreurs communes</h1>
+
+<p>Les erreurs communes se limitent souvent à l’utilisation de plusieurs langues pour le mot <code>exercices</code> lorsque <code>exercise</code> est attendu.</p>
+
+<p>Les titres des sections pour les routes ne précisent pas la méthode et nécessite de scroller sur la documentation pour être certain d’être dans la bonne section, c’est un détail sur l’ergonomie de la documentation non négligeable mais pas non plus prioritaire.</p>
+
+
+
+<h1 id="get-exercises"><code>GET /exercises</code></h1>
+
+<p>Cette route est actuellement utilisé pour lister tout les exercices avec ou sans modération. Il est nécessaire d’y apporter les informations de modération afin de pouvoir les classer correctement.</p>
+
+<pre><code>[
+    {
+        "id:" 1,
+        "course": {
+            "id": 1,
+            "name": "Getting started with C",
+            "language": {
+                "id": "1",
+                "name": "C"
+            }
+        },
+        "account": {
+            ...
+        },
+        "title": "Write a HelloWorld app",
+        "instructions": "You are tasked to write a HelloWorld app that will print HelloWorld followed by a new line.",
+        "mod": {
+            "published": false,
+            "message": "This exercise was not moderated yet"
+        },
+        "date": {
+            "edited": 1234567890,
+            "created": 1234567890
+        },
+        "grade": 1
+    }
+]
+</code></pre>
+
+<p>La récupération de la <code>date</code> permet de classer les exercices par date mais ce n’est pas un champ très important et peut donc être ignoré dans conséquences. <br>
+L’objet <code>mod</code> défini un status de modération où une <code>boolean</code> représente l’état de publication accompagné du message du modérateur.</p>
+
+<p>Dans le cas ou aucun exercices n’est retourné il est souhaitable d’afficher un status <code>200</code> et de fournir une liste vide pour indiquer qu’aucun cours n’existe.</p>
+
+
+
+<h1 id="get-exerciseid"><code>GET /exercise/{id}</code></h1>
+
+<p>Lorsqu’un utilisateur récupére un exercice depuis son <code>id</code> on peut considérer que l’utilisateur cherche à le réaliser et il est donc nécessaire de fournir les fichiers par défaut ou de charger les fichier qui ont été écrit par l’utilisateur authentifié.</p>
+
+<pre><code>{
+    "id:" 1,
+    "course": {
+        "id": 1,
+        "name": "Getting started with C",
+        "language": {
+            "id": "1",
+            "name": "C"
+        }
+    },
+    "account": {
+        ...
+    },
+    "title": "Write a HelloWorld app",
+    "instructions": "You are tasked to write a HelloWorld app that will print HelloWorld followed by a new line.",
+    "code": [
+        {"name": "main.c", "content": "#include &lt;stdio.h&gt;\n\nint main() {\n\tprintf("\n");\nreturn (0);\n}"}
+    ],
+    "mod": {
+        "published": false,
+        "message": "This exercise was not moderated yet"
+    },
+    "date": {
+        "edited": 1234567890,
+        "created": 1234567890
+    },
+    "grade": 1
+}
+</code></pre>
+
+<p>L’objet <code>code</code> doit forcément renseigner au moins:</p>
+
+<ul>
+<li><code>name</code>: représentation du nom du fichier;</li>
+<li><code>content</code>: représentation du contenu du fichier.</li>
+</ul>
+
+<p>L’éditeur du frontend supporte deux options supplémentaire pour définir l’utilisation du fichier:</p>
+
+<ul>
+<li><code>Boolean readonly</code>: défini si l’utilisateur est en droit de modifier le fichier;</li>
+<li><code>Boolean cloasable</code>: défini si l’utilisateur peut fermer le fichier, et donc le supprimer de son environnement de travail.</li>
+</ul>
+
+<p>La variable <code>grade</code> pourrait être représenté sous forme d’objet pour contenir la note maximum pouvant être attribué et la note que l’utilisateur a reçu lors d’un exécution précédente/</p>
+
+<pre><code>{ "max": 10, "grade": 5 }
+</code></pre>
+
+<p>La répétition de <code>grade</code> n’est peut être pas idéal et pourra être remplacé par un autre nom au besoin.</p>
+
+
+
+<h1 id="get-exerciseidscript"><code>GET /exercise/{id}/script</code></h1>
+
+<p>Je propose de renommer cette route en <code>GET /exercise/{id}/edit</code> pour mettre l’accent sur l’action désiré par cette route. L’objet renvoyé par cette route est le même que pour <code>GET /exercise/{id}</code> avec pour seule différence l’objet <code>code</code>.</p>
+
+<p>L’objet <code>code</code> est une liste composé au moins de:</p>
+
+<ul>
+<li><code>check.sh</code>: le script de correction;</li>
+<li><p>Les fichiers qui permettent de composer un <em>programme modèle</em>.</p>
+
+<pre><code>{
+    "id:" 1,
+    "course": {
+        "id": 1,
+        "name": "Getting started with C",
+        "language": {
+            "id": "1",
+            "name": "C"
+        }
+    },
+    "account": {
+        ...
+    },
+    "title": "Write a HelloWorld app",
+    "instructions": "You are tasked to write a HelloWorld app that will print HelloWorld followed by a new line.",
+    "code": [
+        {"name": "check.sh", "content": "#!/bin/sh\n\ngcc helloworld.c -o model\ngcc main.c -o a.out\ndiff &lt;(./model) &lt;(./a.out)\nexit $?"},
+        {"name": "helloworld.c", "content": "#include &lt;stdio.h&gt;\n\nint main() {\n\tprintf("HelloWorld\n");\nreturn (0);\n}"}
+    ],
+    "mod": {
+        "published": false,
+        "message": "This exercise was not moderated yet"
+    },
+    "date": {
+        "edited": 1234567890,
+        "created": 1234567890
+    },
+    "grade": 1
+}
+</code></pre></li>
+</ul>
+
+
+
+<h1 id="get-exerciseidmoderation"><code>GET /exercise/{id}/moderation</code></h1>
+
+<p>Cette route devient obsolète avec l’inclusion des informations de modérations sur les exercices eux même.</p>
+
+
+
+<h1 id="post-exercise"><code>POST /exercise</code></h1>
+
+<p>Afin de faciliter la création d’exercices il serait intéressant de permettre l’initialisation de la création de l’exercice en fournissant l’objet suivant:</p>
+
+<pre><code>{
+    "course_id": 1,
+    "title": "New exercise",
+    "instruction": "Sample instruction.",
+    "code": [
+        {"name": "check.sh", "content": "#!/bin/sh\n\nexit $?"}
+    ]
+    "grade": 10
+}
+</code></pre>
+
+<p>Dans ce cas la nous initialisons le script de correction avec l’exercice en une seule requête HTTP. Cette inclusion rend obsolète la route <code>GET /exercise/script</code>.</p>
+
+<p>La variable <code>grade</code> n’est peut être pas très importante car nous pouvons aussi nous contenter de vérifier si l’exercice est résolu ou bien si l’utilisateur à échouer afin de constituer des conditions de réussite indépendante d’une note numérique.</p>
+
+<p>Le <code>course_id</code> est bien sûr toujours nécessaire pour préciser à quel cours cet exercice est rattaché. Il n’est pas nécessaire cependant d’y rattacher un compte utilisateur à l’aide de la variable <code>account_id</code> (<a href="https://gitlab.com/CodeandLearn/Doc/blob/b2f1d205cda7479d1c8ea75c66e6e02ef211c71f/API_REST/Exercices.md#exercise">voir documentation</a>).</p>
+
+
+
+<h1 id="post-exercisemoderation"><code>POST /exercise/moderation</code></h1>
+
+<p>Cette route devient obsolète avec la création d’une entrée dans la table de modération lors de la création d’un exercice.</p>
+
+
+
+<h1 id="put-exerciseid"><code>PUT /exercise/{id}</code></h1>
+
+<p>La variable <code>course_id</code> n’est plus nécessaire car l’exercice est déjà associé à un cours.</p>
+
+<pre><code>{
+    "title": "New exercise",
+    "instruction": "Sample instruction.",
+    "code": [
+        {"name": "check.sh", "content": "#!/bin/sh\n\nexit $?"}
+    ]
+    "grade": 10
+}
+</code></pre>
+
+<p>La liste <code>code</code> peut ainsi être étendu et rétrécit au besoin pour le <em>programme model</em>. En cas d’ajoute ou de suppression il sera nécessaire d’effectuer les opérations nécessaire du coté du backend pour supprimer les fichiers non utilisé ou en ajouter d’autres. <br>
+Cette dernière peut être facilité à l’aide d’un système de versionning permettant de créer une nouvelle entrée et de cacher l’entrée précédente lorsqu’une plus récente est publié et approuvé.</p>
+
+
+
+<h1 id="delete-exerciseid"><code>DELETE /exercise/{id}</code></h1>
+
+<p>Cette route devrait se charger de supprimer le script de correction et le code du <em>programme model</em> en plus de supprimer l’entrée dans la base de données pour l’exercice. Cette entrée doit donc avoir un effet de cascade sur:</p>
+
+<ul>
+<li>Les scripts;</li>
+<li>Les corrections;</li>
+<li>La modération.</li>
+</ul>
+
+
+
+<h1 id="exercisecorrection"><code>/exercise/correction</code></h1>
+
+<p>Cette route ne devrait pas être accessible depuis le frontend afin de ne pas permettre à un utilisateur de gruger dans les résultats de ses exercices.</p>
+
+
+
+<h1 id="exercisecomment"><code>/exercise/comment</code></h1>
+
+<p>Il n’est pas encore prévue pour le frontend de permettre à un utilisateur de poster des commentaires sur les exercices. Il serait préférable de faire ça depuis le forum et d’ignorer ces routes pour une plus grande simplicité.</p>
+
+<p>Dans le cas où cette route doit être utilisé, elle nécessite un ajout d’un objet <code>account</code> pour décrire l’utilisateur.</p>
+
+<h1 id="get-userexercices"><code>GET /user_exercices</code></h1>
+
+<p>Cette route devrait retourner une liste d’exercices complète avec les champs exercices cité dans la section <code>GET /exercise/{id}</code>.</p>
+
+
+
+<h1 id="post-userexerciseid"><code>POST /user_exercise/{id}</code></h1>
+
+<p>Pour permettre à l’utilisateur de soumettre son code pour résoudre un exercice, il serait plus facile et interessant de soumettre tout le code sous la forme de l’objet suivant:</p>
+
+<pre><code>{
+    "code": [
+        {"name": "putchar.c", "content": "void putchar(char c) {\n\nwrite(1, &amp;c, 1);\n}"},
+        {"name": "putchar.h", "#pragma once\n\nvoid putchar(char c);"}
+    ]
+}
+</code></pre>
+
+<p>La list <code>code</code> prendra une liste de taille variable.</p>
+
+<p>Les variable <code>account_id</code> et <code>exercice_id</code> doivent être définie respectivement à l’aide du header d’authorisation et de la route employée contrairement à ce qui <a href="https://gitlab.com/CodeandLearn/Doc/blob/b2f1d205cda7479d1c8ea75c66e6e02ef211c71f/API_REST/User_Exercice.md#succ%C3%A8s-type">est documenté</a>.</p>
+
+
+
+<h1 id="put-userexerciseid"><code>PUT /user_exercise/{id}</code></h1>
+
+<p>Cette route est inutile à partir du moment où l’on souhaite garder un historique des compilations de l’utilisateur. Cet historique peut permettra à l’utilisateur de contrôler l’évolution de son code.</p>
+
+<h1 id="get-accountid"><code>GET /account/{id}</code></h1>
+
+<p>Il est impératif de cacher l’adresse email lorsqu’un utilisateur lance une requête pour récupérer l’adresse email d’un autre utilisateur. Ce changement vise tout les objets JSON qui serait susceptible de fournir les adresses email des membres à n’importe qui pouvant regarder les requêtes. <br>
+Ceci fait partie de la protections des données personnels des utilisateurs.</p>
+
+
+
+<h1 id="put-account"><code>PUT /account</code></h1>
+
+<p>Afin d’éditer le profil il est nécessaire d’envisager l’utilisation de cette route dans plusieurs cas.</p>
+
+<p>Cas N°1: l’utilisateur souhaite modifier:</p>
+
+<ul>
+<li>Son nom d’utilisateur;</li>
+<li>Son adresse email;</li>
+<li>Son avatar;</li>
+<li>Mais pas son mot de passe.</li>
+</ul>
+
+<p>Il est nécessaire de pouvoir envoyer un objet JSON dont le champ mot de passe est vide, l’API prendra en compte le champ vide et ne changera pas le mot de passe.</p>
+
+<p>Cas N°2: l’utilisateur souhaite modifier son mot de passe, dans ce cas l’utilisateur remplis le formulaire pour fournir un nouveau mot de passe et l’API se chargera de le prendre en compte.</p>
+
+<p>L’objet JSON idéal concernant ces informations se représenterais de la façon suivante:</p>
+
+<pre><code>{
+    "username": "hirsch_b",
+    "password": "",
+    "email": "hirsch_b@epitech.eu",
+    "avatar": "//www.gravatar.com/avatar/HASH"
+}
+</code></pre>
+
+<p>Cette requête ne changera donc pas le mot de passe utilisateur.</p>
+
+<p>Le champ <code>group_id</code> est facultatif et ne sera prit en compte que si la requête émanne d’un <code>Administrateur</code>.</p>
+
+<p>Pour l’utilisation d’un Gravatar il est nécessaire que le backend calcule la somme MD5 sur l’adresse email de l’utilisateur pour former le lien. Il est préférable d’utiliser une URL commençant par <code>//</code> au lieu de <code>http://</code> au cas où on servirait en <code>HTTPS</code>.</p>
+
+<h1 id="forum">Forum</h1>
+
+<p>Pour le forum il sera nécessaire d’étudier les améliorations proposé ici pour ne pas le surcharger en éléments inutile et factoriser au maximum les opérations.</p>
