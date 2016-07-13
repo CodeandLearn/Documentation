@@ -19,7 +19,6 @@
   "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
   "name": "file.txt"
 }
-
 ```
 
 ### Grade
@@ -91,7 +90,35 @@ Returns the user_exercise object linked to the connected user pointing to the ex
   "timestamp": 1466865926781
 }
 ```
-
+### user_exercise/{id}/log
+```
+{
+  "user_exercice_id": 1,
+  "id": 2,
+  "content": "test",
+  "timestamp": 1465981262675
+}
+```
+### user_exercise/{id}/codes
+```
+{
+  "create_timestamp": 1465981217540,
+  "user_exercice_id": 2,
+  "modify_timestamp": 1465981217540,
+  "id": 2,
+  "content": "#include <stdio.h>\n \nint main()\n{\n  printf(\"Hello world\\n\");\n  return 0;\n}",
+  "name": "file.txt"
+}
+```
+### user_exercise/{id}/grade
+```
+{
+  "user_exercice_id": 1,
+  "id": 2,
+  "value": 10,
+  "timestamp": 1465981188313
+}
+```
 
 #### Post Methods
 
@@ -118,7 +145,7 @@ Ajoute une entree
 }
 ```
 
-### Code
+### user_exercise/code/
 
 Ajoute un fichier de code
 
@@ -130,7 +157,7 @@ Ajoute un fichier de code
 }
 ```
 
-### Grade
+### user_exercise/grade
 
 Ajoute une note
 
@@ -141,7 +168,7 @@ Ajoute une note
 }
 ```
 
-### Log
+### user_exercise/log
 Ajoute un log d'execution
 
 ```
@@ -152,8 +179,18 @@ Ajoute un log d'execution
 ```
 
 #### Put Methods
+```
+{
+  "path": "{Path}",
+  "code": 200,
+  "method": "PUT",
+  "error": "OK",
+  "timestamp": 1465916194498
+}
+```
 
-### user_exercise/
+
+### user_exercise/user_exercise/{id}
 
 Modifie une entree
 
@@ -165,7 +202,7 @@ Modifie une entree
 }
 ```
 
-### Code
+### user_exercise/code/{id}
 
 Modifie un fichier de code
 
@@ -178,7 +215,7 @@ Modifie un fichier de code
 }
 ```
 
-### Grade
+### user_exercise/grade/{id}
 
 Modifie une note
 
@@ -190,7 +227,7 @@ Modifie une note
 }
 ```
 
-### Log
+### user_exercise/log/{id}
 
 Modifie un log d'execution
 
@@ -199,36 +236,6 @@ Modifie un log d'execution
   "id": 1,
   "user_exercice_id": 1,
   "content": "test"
-}
-```
-
-### user_exercise/{id}
-
-### Code/{id}
-
-### Grade/{id}
-
-### Log/{id}
-
-
-Ajoute une entree
-
-```
-{
-  "account_id": 12,
-  "exercice_id": 1,
-  "id" = 1
-}
-```
-### Succès type
-
-```
-{
-  "path": "{Path}",
-  "code": 200,
-  "method": "PUT",
-  "error": "OK",
-  "timestamp": 1465916194498
 }
 ```
 
