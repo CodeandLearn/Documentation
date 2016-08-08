@@ -32,7 +32,7 @@ Permet de supprimer le token actuel
 Header d'envoi :
 ```
   Content-Type : application/json
-  Authorization : Basic dGVzdDpzZWNyZXQ=
+  Authorization : Bearer bal0o08s5rsulmdu3qsrg1lgej
 ```
 Réception JSON :
 ```
