@@ -1,6 +1,6 @@
 # Login
 ## Récupération d'un token
-### Requête `/oauth/token?grant_type=client_credentials` méthode `POST`
+### Requête `/oauth` méthode `POST`
 Pour créer l'authorisation il suffit d'encoder `username:password` en base64.
 
 Ex : `test:secret` encodé en base64 donne `dGVzdDpzZWNyZXQ=`
@@ -13,10 +13,37 @@ Header d'envoi :
 Réception JSON :
 ```
 {
-  "access_token": "193590b7-80b3-43b1-932b-c2df7b891d73",
+  "code": 200,
+  "method": "POST",
   "token_type": "bearer",
-  "expires_in": 51730,
-  "scope": "read"
+  "error": "OK",
+  "access_token": "bal0o08s5rsulmdu3qsrg1lgej",
+  "path": "/oauth",
+  "scope": "read/write",
+  "expires_in": 1470673283336,
+  "group": 50,
+  "timestamp": 1470666083288
+}
+```
+
+### Requête `/revoke` méthode `DELETE`
+Permet de supprimer le token actuel
+
+Header d'envoi :
+```
+  Content-Type : application/json
+  Authorization : Basic dGVzdDpzZWNyZXQ=
+```
+Réception JSON :
+```
+{
+  "path": "/revoke",
+  "code": 200,
+  "method": "DELETE",
+  "scope": "read/write",
+  "token_type": "bearer",
+  "error": "OK",
+  "timestamp": 1470666025415
 }
 ```
 
