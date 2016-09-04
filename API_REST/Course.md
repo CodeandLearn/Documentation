@@ -79,6 +79,7 @@ Récéption JSON :
 ```
 ### Requête `/course/{limit}` méthode `GET`
 Récéption JSON pour une limite de `1`:
+```
 {
   "path": "/course/limit/{limit}",
   "code": 200,
