@@ -152,6 +152,7 @@ Récéption JSON pour une limite de `1`:
 ```
 ### Requête `/course/id/{id}` méthode `GET`
 Récéption JSON pour une id de `1`:
+```
 {
   "path": "/course/id/{id}",
   "code": 200,
@@ -224,6 +225,7 @@ Récéption JSON pour une id de `1`:
 ```
 ### Requête `/course/author/id/{id}` méthode `GET`
 Récéption JSON pour une author_id de `1`:
+```
 {
   "path": "/course/author/id/{author_id}",
   "code": 200,
@@ -296,6 +298,7 @@ Récéption JSON pour une author_id de `1`:
 ```
 ### Requête `/course/language/id/{language_id}` méthode `GET`
 Récéption JSON pour un language_id de `1`:
+```
 {
   "path": "/course/language/id/{language_id}",
   "code": 200,
@@ -368,6 +371,7 @@ Récéption JSON pour un language_id de `1`:
 ```
 ### Requête `/course/locales/id/{locales_id}` méthode `GET`
 Récéption JSON pour un locales_id de `1`:
+```
 {
   "path": "/course/locales/id/{locales_id}",
   "code": 200,
@@ -440,6 +444,7 @@ Récéption JSON pour un locales_id de `1`:
 ```
 ### Requête `/course/title/{title}` méthode `GET`
 Récéption JSON avec comme titre `test de cour`:
+```
 {
   "path": "/course/title/{title}",
   "code": 200,
@@ -512,6 +517,7 @@ Récéption JSON avec comme titre `test de cour`:
 ```
 ### Requête `/course/comment/{id_course}` méthode `GET`
 Récéption JSON des commentaires du cours d'id id_course :
+```
 {
   "path": "/course/comment/{id_course}",
   "code": 200,
@@ -567,6 +573,10 @@ JSON à envoyer :
 ```
 ### Requête `/course/comment` méthode `POST`
 JSON à envoyer :
+```
+{
+	"content": "J'adore !"
+}
 ```
 
 ## PUT - Modification
