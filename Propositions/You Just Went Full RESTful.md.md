@@ -1,5 +1,3 @@
-[TOC]
-
 # Introduction
 
 Après avoir utilisé l'API pour les exercices il est nécessaire de repasser sur de nombreux aspects de la partie exercices et utilisateur pour la rendre fonctionnelle et agréable à utiliser avec le frontend.
@@ -211,7 +209,7 @@ La variable `course_id` n'est plus nécessaire car l'exercice est déjà associ�
 La liste `code` -- La liste code doit etre gere a partir des routes code_template -- peut ainsi être étendu et rétrécit au besoin pour le *programme model*. En cas d'ajoute ou de suppression il sera nécessaire d'effectuer les opérations nécessaire du coté du backend pour supprimer les fichiers non utilisé ou en ajouter d'autres.  
 Cette dernière peut être facilité à l'aide d'un système de versionning permettant de créer une nouvelle entrée et de cacher l'entrée précédente lorsqu'une plus récente est publié et approuvé.
 
-# `DELETE /exercise/{id}` --Will be done
+# `DELETE /exercise/{id}` --DONE
 
 Cette route devrait se charger de supprimer le script de correction et le code du *programme model* en plus de supprimer l'entrée dans la base de données pour l'exercice. Cette entrée doit donc avoir un effet de cascade sur:
 
