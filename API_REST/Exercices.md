@@ -70,35 +70,37 @@ Cette methode permet de recuperer la liste d'exercices
   "data": [
     {
       "course_id": 1,
-      "account_id": 12,
-      "instruction": "Hello World!",
-      "grade_max": 0,
+      "codes": [],
+      "account_id": 1,
+      "instruction": "test d'instruction",
+      "grade_max": 10,
+      "moderation": {
+        "exercise_id": 0,
+        "moderation_validate_id": 0
+      },
       "id": 1,
-      "title": "COUCOU"
+      "title": "test de titre"
     },
     {
       "course_id": 1,
-      "account_id": 12,
-      "instruction": "Hello Dave",
-      "grade_max": 0,
-      "id": 3,
-      "title": "jeej"
-    },
-    {
-      "course_id": 1,
-      "account_id": 12,
-      "instruction": "Utiliser la commande 'echo' pour afficher 'Hello World1'",
-      "grade_max": 20,
-      "id": 4,
-      "title": "Test POST exercie"
+      "codes": [],
+      "account_id": 1,
+      "instruction": "",
+      "grade_max": 1,
+      "moderation": {
+        "exercise_id": 0,
+        "moderation_validate_id": 0
+      },
+      "id": 2,
+      "title": "New exercise"
     }
   ],
   "error": "OK",
-  "timestamp": 1465817342774
+  "timestamp": 1473930486253
 }
 ```
 
-### /exercise/course/{course_id}
+### /exercises/course/{course_id}
 
 Cette methode permet de recuperer la liste d'exercices liée au cours passé en paramétre
 
@@ -106,29 +108,39 @@ JSON type sur succès
 
 ```
 {
-  "path": "/exercise/course/{course_id}",
+  "path": "/exercises/course/{course_id}",
   "code": 200,
   "method": "GET",
   "data": [
     {
       "course_id": 1,
-      "account_id": 12,
-      "instruction": "Hello World!",
-      "grade_max": 0,
+      "account_id": 1,
+      "instruction": "test d'instruction",
+      "grade_max": 10,
+      "moderation": {
+        "exercise_id": 1,
+        "moderation_validate_id": 1,
+        "commentary": "Nothing"
+      },
       "id": 1,
-      "title": "COUCOU"
+      "title": "test de titre"
     },
     {
       "course_id": 1,
-      "account_id": 12,
-      "instruction": "Hello Dave!",
-      "grade_max": 0,
-      "id": 3,
-      "title": "jeej"
+      "account_id": 1,
+      "instruction": "",
+      "grade_max": 1,
+      "moderation": {
+        "exercise_id": 2,
+        "moderation_validate_id": 1,
+        "commentary": "Lel"
+      },
+      "id": 2,
+      "title": "New exercise"
     }
   ],
   "error": "OK",
-  "timestamp": 1465815932513
+  "timestamp": 1473930510062
 }
 ```
 
@@ -146,15 +158,28 @@ JSON type sur succès
   "data": [
     {
       "course_id": 1,
-      "account_id": 12,
-      "instruction": "Hello World!",
-      "grade_max": 0,
+      "codes": [
+        {
+          "exercise_id": 1,
+          "file_name": "main.sh",
+          "id": 1,
+          "content": "echo \"Hello World!\""
+        }
+      ],
+      "account_id": 1,
+      "instruction": "test d'instruction",
+      "grade_max": 10,
+      "moderation": {
+        "exercise_id": 1,
+        "moderation_validate_id": 1,
+        "commentary": "Nothing"
+      },
       "id": 1,
-      "title": "COUCOU"
+      "title": "test de titre"
     }
   ],
   "error": "OK",
-  "timestamp": 1465816065661
+  "timestamp": 1473930531315
 }
 ```
 
