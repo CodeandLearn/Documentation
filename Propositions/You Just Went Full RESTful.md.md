@@ -38,7 +38,7 @@ Le site web est composé d'une partie qui sert d'interface graphique (frontend e
 
 Fournir un maximum de données aux interfaces permet de réduire le nombre de requête et la complexité du code ([voir ce controller](https://gitlab.com/CodeandLearn/Webapp/blob/3044489b18caa4b66593188b10d6a24dbeaf451f/app/js/exercise/controllers.js));
 
-# `GET /exercises`
+# `GET /exercises` --DONE
 
 Cette route est actuellement utilisé pour lister tout les exercices avec ou sans modération. Il est nécessaire d'y apporter les informations de modération afin de pouvoir les classer correctement.
 
@@ -75,7 +75,7 @@ L'objet `mod` défini un status de modération où une `boolean` représente l'�
 
 Dans le cas ou aucun exercices n'est retourné il est souhaitable d'afficher un status `200` et de fournir une liste vide pour indiquer qu'aucun cours n'existe.
 
-# `GET /exercise/{id}`
+# `GET /exercise/{id}` --DONE
 
 
 Lorsqu'un utilisateur récupére un exercice depuis son `id` on peut considérer que l'utilisateur cherche à le réaliser et il est donc nécessaire de fournir les fichiers par défaut ou de charger les fichier qui ont été écrit par l'utilisateur authentifié.
@@ -127,7 +127,7 @@ La répétition de `grade` n'est peut être pas idéal et pourra être remplacé
 
 Le backend doit dont être la partie à décider si il faut charger les fichiers précédent ou en créer de nouveaux afin de ne pas faire tester l'existence de fichiers précédent au frontend.
 
-# `GET /exercise/{id}/script`
+# `GET /exercise/{id}/script` --Hidden, script should be used by server-comm to evaluate the exercise
 
 Je propose de renommer cette route en `GET /exercise/{id}/edit` pour mettre l'accent sur l'action désiré par cette route. L'objet renvoyé par cette route est le même que pour `GET /exercise/{id}` avec pour seule différence l'objet `code`.
 
@@ -167,11 +167,11 @@ L'objet `code` est une liste composé au moins de:
 		}
 
 
-# `GET /exercise/{id}/moderation`
+# `GET /exercise/{id}/moderation` --Untouched
 
 Cette route devient obsolète avec l'inclusion des informations de modérations sur les exercices eux même.
 
-# `POST /exercise`
+# `POST /exercise` --Untouched
 
 Afin de faciliter la création d'exercices il serait intéressant de permettre l'initialisation de la création de l'exercice en fournissant l'objet suivant:
 
@@ -187,15 +187,15 @@ Afin de faciliter la création d'exercices il serait intéressant de permettre l
 
 Dans ce cas la nous initialisons le script de correction avec l'exercice en une seule requête HTTP. Cette inclusion rend obsolète la route `GET /exercise/script`.
 
-La variable `grade` n'est peut être pas très importante car nous pouvons aussi nous contenter de vérifier si l'exercice est résolu ou bien si l'utilisateur à échouer afin de constituer des conditions de réussite indépendante d'une note numérique.
+La variable `grade` n'est peut être pas très importante car nous pouvons aussi nous contenter de vérifier si l'exercice est résolu ou bien si l'utilisateur à échouer afin de constituer des conditions de réussite indépendante d'une note numérique. --il s'agit ici de la note maximale obtensible
 
 Le `course_id` est bien sûr toujours nécessaire pour préciser à quel cours cet exercice est rattaché. Il n'est pas nécessaire cependant d'y rattacher un compte utilisateur à l'aide de la variable `account_id` ([voir documentation](https://gitlab.com/CodeandLearn/Doc/blob/b2f1d205cda7479d1c8ea75c66e6e02ef211c71f/API_REST/Exercices.md#exercise)).
 
-# `POST /exercise/moderation`
+# `POST /exercise/moderation` --Hidden
 
 Cette route devient obsolète avec la création d'une entrée dans la table de modération lors de la création d'un exercice.
 
-# `PUT /exercise/{id}`
+# `PUT /exercise/{id}` --DONE
 
 La variable `course_id` n'est plus nécessaire car l'exercice est déjà associé à un cours.
 
@@ -220,11 +220,11 @@ Cette route devrait se charger de supprimer le script de correction et le code d
 * La modération.
 
 
-# `/exercise/correction`
+# `/exercise/correction` --La route sers si l'utilisateur est justement incapable de resoudre l'exercice
 
 Cette route ne devrait pas être accessible depuis le frontend afin de ne pas permettre à un utilisateur de gruger dans les résultats de ses exercices.
 
-# `/exercise/comment`
+# `/exercise/comment` 
 
 Il n'est pas encore prévue pour le frontend de permettre à un utilisateur de poster des commentaires sur les exercices. Il serait préférable de faire ça depuis le forum et d'ignorer ces routes pour une plus grande simplicité.
 
