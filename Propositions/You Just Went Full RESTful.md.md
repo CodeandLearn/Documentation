@@ -208,10 +208,10 @@ La variable `course_id` n'est plus nécessaire car l'exercice est déjà associ�
 		"grade": 10
 	}
 
-La liste `code` peut ainsi être étendu et rétrécit au besoin pour le *programme model*. En cas d'ajoute ou de suppression il sera nécessaire d'effectuer les opérations nécessaire du coté du backend pour supprimer les fichiers non utilisé ou en ajouter d'autres.  
+La liste `code` -- La liste code doit etre gere a partir des routes code_template -- peut ainsi être étendu et rétrécit au besoin pour le *programme model*. En cas d'ajoute ou de suppression il sera nécessaire d'effectuer les opérations nécessaire du coté du backend pour supprimer les fichiers non utilisé ou en ajouter d'autres.  
 Cette dernière peut être facilité à l'aide d'un système de versionning permettant de créer une nouvelle entrée et de cacher l'entrée précédente lorsqu'une plus récente est publié et approuvé.
 
-# `DELETE /exercise/{id}`
+# `DELETE /exercise/{id}` --Will be done
 
 Cette route devrait se charger de supprimer le script de correction et le code du *programme model* en plus de supprimer l'entrée dans la base de données pour l'exercice. Cette entrée doit donc avoir un effet de cascade sur:
 
@@ -220,7 +220,7 @@ Cette route devrait se charger de supprimer le script de correction et le code d
 * La modération.
 
 
-# `/exercise/correction` --La route sers si l'utilisateur est justement incapable de resoudre l'exercice
+# `/exercise/correction` --La route sert si l'utilisateur est justement incapable de resoudre l'exercice
 
 Cette route ne devrait pas être accessible depuis le frontend afin de ne pas permettre à un utilisateur de gruger dans les résultats de ses exercices.
 
