@@ -222,7 +222,7 @@ Cette route devrait se charger de supprimer le script de correction et le code d
 
 Cette route ne devrait pas être accessible depuis le frontend afin de ne pas permettre à un utilisateur de gruger dans les résultats de ses exercices.
 
-# `/exercise/comment` 
+# `/exercise/comment`
 
 Il n'est pas encore prévue pour le frontend de permettre à un utilisateur de poster des commentaires sur les exercices. Il serait préférable de faire ça depuis le forum et d'ignorer ces routes pour une plus grande simplicité.
 

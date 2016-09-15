@@ -8,4 +8,4 @@
 * [Login](API_REST/Login.md)
 * [User Exercice](API_REST/User_Exercice.md)
 
-* [Props](https://gitlab.com/CodeandLearn/Doc/blob/master/Propositions/You%20Just%20Went%20Full%20RESTful.md.md)
+* [Props](https://gitlab.com/CodeandLearn/Doc/blob/master/Propositions/You%20Just%20Went%20Full%20RESTful.md)
