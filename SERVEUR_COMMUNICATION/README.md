@@ -146,11 +146,11 @@ Ensuite, j'installe les éléments de compilation importants, ainsi que les él�
 
 ```bash
 apt-get update
-apt-get install gcc g++ dos2unix
+apt-get install gcc g++ dos2unix python
 exit
 ```
 
-ATTENTION: dos2unix EST OBLIGATOIRE POUR LE BON FONCTIONNEMENT DU SERVEUR COMMUNICATION
+ATTENTION: dos2unix et python SONT OBLIGATOIRES POUR LE BON FONCTIONNEMENT DU SERVEUR COMMUNICATION
 
 Enfin, il ne reste plus qu'à enregistrer la nouvelle image:
 ```bash
