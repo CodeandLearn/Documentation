@@ -34,15 +34,21 @@ Elle a pour but de prévenir les utilisateurs lors de la mise à jour de leur pl
 
 Le protocole est composé des commandes suivantes:
 
-* AuthPacket: Ce packet est à destination du serveur de communication et permet d’identifier le client. Celui-ci prend la forme suivante: {"cmd":"AUTH","TOKEN":"TOKEN_UTILISATEUR"}TOKEN_UTILISATEUR représente le token généré par le Backend, et permet d’identifier le client.
+* AuthPacket: Ce packet est à destination du serveur de communication et permet d’identifier le client. Celui-ci prend la forme suivante: {"cmd":"AUTH","TOKEN":"TOKEN_UTILISATEUR"}
+TOKEN_UTILISATEUR représente le token généré par le Backend, et permet d’identifier le client.
 
-* ExerciceExecutedPacket: Ce packet est à destination des clients, et permet de prévenir un utilisateur que son exercice a été exécuté et corrigé. Il prend la forme suivante:{"cmd":"EXERCICE_EXECUTED","id":"EXERCICE_ID"}EXERCICE_ID représente l’identifiant de l’exercice dans la base de données.
+* ExerciceExecutedPacket: Ce packet est à destination des clients, et permet de prévenir un utilisateur que son exercice a été exécuté et corrigé. Il prend la forme suivante:
+{"cmd":"EXERCICE_EXECUTED","id":"EXERCICE_ID"}
+EXERCICE_ID représente l’identifiant de l’exercice dans la base de données.
 
-* PlaceInQueuePacket: Ce packet est à destination des clients, et permet au client de connaître sa place dans la file d’attente, si il y en a une. Il prend la forme suivante: {"cmd":"PLACE_IN_QUEUE","user_exercice_id":"EXERCICE_ID","place":"PLACE"}EXERCICE_ID représente l’ID de l’exercice, PLACE, la place actuelle de l’utilisateur dans la file d’attente.
+* PlaceInQueuePacket: Ce packet est à destination des clients, et permet au client de connaître sa place dans la file d’attente, si il y en a une. Il prend la forme suivante: {"cmd":"PLACE_IN_QUEUE","user_exercice_id":"EXERCICE_ID","place":"PLACE"}
+EXERCICE_ID représente l’ID de l’exercice, PLACE, la place actuelle de l’utilisateur dans la file d’attente.
 
-* OkPacket: Ce packet est à destination des clients, et leur permet de savoir si la commande a bien été comprise et exécutée par le serveur. Il est systématiquement envoyé à chaque commande utilisateur si elle est exécutée correctement. Il prend la forme suivante:{"cmd":"OK"}
+* OkPacket: Ce packet est à destination des clients, et leur permet de savoir si la commande a bien été comprise et exécutée par le serveur. Il est systématiquement envoyé à chaque commande utilisateur si elle est exécutée correctement. Il prend la forme suivante:
+{"cmd":"OK"}
 
-* ErrorPacket: Ce packet est à destination des clients, et permet de les prévenir en cas d’erreur. Il prend la forme suivante: {"cmd":"ERROR","error_code":"ERROR_CODE","target":"TARGET","target_id":"TARGET_ID"}ERROR_CODE représente le code d’erreur, TARGET représente la cible de l’erreur (EXERCICE, CONTAINER, OTHER), TARGET_ID représente l’ID (si il y en a une) de la TARGET.
+* ErrorPacket: Ce packet est à destination des clients, et permet de les prévenir en cas d’erreur. Il prend la forme suivante: {"cmd":"ERROR","error_code":"ERROR_CODE","target":"TARGET","target_id":"TARGET_ID"}
+ERROR_CODE représente le code d’erreur, TARGET représente la cible de l’erreur (EXERCICE, CONTAINER, OTHER), TARGET_ID représente l’ID (si il y en a une) de la TARGET.
 
 **Codes erreurs:**
 
@@ -118,3 +124,40 @@ Le ExecService permet d’exécuter les ordres d’exécution d’exercices en r
 
 Le DockerManager est le service permettant de gérer les services Docker. Il reçoit des requêtes d’exécution de la part du ExecService, et exécute les requêtes en fonction des différents containers Docker à sa disposition.
 
+**F - Le fichier de configuration**
+
+TODO
+
+**G - Créer les images utilisées par le serveur dans Docker**
+
+Le Serveur Communication a besoin d'images pré-crées dans Docker, car celui-ci crée un nouveau conainer via cette image.
+
+L'image doit être créée en fonction du langage visé (ATTENTION: Le langage n'est pas encore géré par le serveur comm!) ainsi que sauvegardée.
+
+Prenons pour exemple une image qui gèrera la compilation C et C++:
+
+Tout d'abord, je crée une image d'une debian propre et je la lance avec un bash:
+
+```bash
+docker run -it debian /bin/bash
+```
+
+Ensuite, j'installe les éléments de compilation importants, ainsi que les éléments obligatoires pour que tout fonctionne correctement et je quite le container:
+
+```bash
+apt-get update
+apt-get install gcc g++ dos2unix
+exit
+```
+
+ATTENTION: dos2unix EST OBLIGATOIRE POUR LE BON FONCTIONNEMENT DU SERVEUR COMMUNICATION
+
+Enfin, il ne reste plus qu'à enregistrer la nouvelle image:
+```bash
+docker commit <hash tag du container qui a été configuré> <nom de l'image>
+```
+
+Une fois que l'image est crée, elle devrait apparaitre en utilisant la commande suivante, dans la configuration, c'est un des TAG de l'image qui doit être définit dans "name":
+```bash
+docker images
+```
