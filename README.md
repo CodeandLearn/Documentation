@@ -6,6 +6,7 @@
 * [Course] (API_REST/Course.md)
 * [Exercices](API_REST/Exercices.md)
 * [Forum](API_REST/Forum.md)
+* [Forumv2 last build](API_REST/Forumv2.md)
 * [Login](API_REST/Login.md)
 * [User Exercice](API_REST/User_Exercice.md)
 * [Badge](API_REST/Badge.md)
