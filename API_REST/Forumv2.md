@@ -1,4 +1,39 @@
 # Forum
+## Power view
+```
+[GET]/forum=0
+[GET]/forum/{id_forum}=0
+[GET]/forum/subject/{id_subject}=0
+[GET]/forum/categories=0
+[GET]/forum/categories/order/position=0
+[GET]/forum/category/{id_category}=0
+[GET]/forum/icons=0
+[GET]/forum/icon/{id_icon}=0
+[POST]/forum/category=30
+[POST]/forum/forum=10
+[POST]/forum/subject=10
+[POST]/forum/subject/post=10
+[POST]/forum/icon=30
+[PUT]/forum/category/{id_category}=50
+[PUT]/forum/forum/{id_forum}=50
+[PUT]/forum/icon/{id_icon}=50
+[PUT]/forum/post/{id_post}=10
+[PUT]/forum/admin/post/{id_post}=50
+[PUT]/forum/post/{id_post}/like=10
+[PUT]/forum/post/{id_post}/dislike=10
+[PUT]/forum/subject/{id_subject}=10
+[PUT]/forum/admin/subject/{id_subject}=50
+[PUT]/forum/admin/subject/{id_subject}/pin=50
+[PUT]/forum/admin/subject/{id_subject}/unpin=50
+[DELETE]/forum/category/{id_category}=50
+[DELETE]/forum/forum/{id_forum}=50
+[DELETE]/forum/icon/{id_icon}=50
+[DELETE]/forum/post/{id_post}=10
+[DELETE]/forum/admin/post/{id_post}=50
+[DELETE]/forum/subject/{id_subject}=10
+[DELETE]/forum/admin/subject/{id_subject}=50
+```
+
 ## GET - Récupération
 
 Les 3 première routes permettent d'avoir toute les informations nécessaires à l'affichage du forum. `/forum`, `/forum/{id_forum}`, `/forum/subject/{id_subject}`.
