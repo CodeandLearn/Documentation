@@ -1,5 +1,8 @@
 # Forum
 ## GET - Récupération
+
+Les 3 première routes permettent d'avoir toute les informations nécessaires à l'affichage du forum. `/forum`, `/forum/{id_forum}`, `/forum/subject/{id_subject}`.
+
 ### Requête `/forum` méthode `GET`
 Récéption JSON :
 ```
@@ -391,9 +394,253 @@ Récéption JSON:
   "timestamp": 1483867051696
 }
 ```
+### Requête `/forum/categories` méthode `GET`
+Récéption JSON:
+```
+{
+  "path": "/forum/categories",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "icon": {
+        "path": "path",
+        "id": 1
+      },
+      "id": 1,
+      "position": 1,
+      "title": "cat",
+      "icon_id": 1
+    },
+    {
+      "icon": {
+        "path": "path",
+        "id": 1
+      },
+      "id": 2,
+      "position": 2,
+      "title": "cat2",
+      "icon_id": 1
+    }
+  ],
+  "length": 2,
+  "error": "OK",
+  "timestamp": 1483868292763
+}
+```
+### Requête `/forum/categories/order/position` méthode `GET`
+Récéption JSON:
+```
+{
+  "path": "/forum/categories/order/position",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "icon": {
+        "path": "path",
+        "id": 1
+      },
+      "id": 1,
+      "position": 1,
+      "title": "cat",
+      "icon_id": 1
+    },
+    {
+      "icon": {
+        "path": "path",
+        "id": 1
+      },
+      "id": 2,
+      "position": 2,
+      "title": "cat2",
+      "icon_id": 1
+    }
+  ],
+  "length": 2,
+  "error": "OK",
+  "timestamp": 1483868546774
+}
+```
+### Requête `/forum/category/{id_category}` méthode `GET`
+Récéption JSON:
+```
+{
+  "path": "/forum/category/{id_category}",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "icon": {
+        "path": "path",
+        "id": 1
+      },
+      "id": 2,
+      "position": 2,
+      "title": "cat2",
+      "icon_id": 1
+    }
+  ],
+  "length": 1,
+  "error": "OK",
+  "timestamp": 1483868670128
+}
+```
+### Requête `/forum/icons` méthode `GET`
+Récéption JSON:
+```
+{
+  "path": "/forum/icons",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "path": "path",
+      "id": 1
+    },
+    {
+      "path": "http://image.flaticon.com/icons/svg/297/297568.svg",
+      "id": 2
+    }
+  ],
+  "length": 2,
+  "error": "OK",
+  "timestamp": 1483875482152
+}
+```
+### Requête `/forum/icon/{id_icon}` méthode `GET`
+Récéption JSON:
+```
+{
+  "path": "/forum/icon/{id_icon}",
+  "code": 200,
+  "method": "GET",
+  "data": [
+    {
+      "path": "http://image.flaticon.com/icons/svg/297/297568.svg",
+      "id": 2
+    }
+  ],
+  "length": 1,
+  "error": "OK",
+  "timestamp": 1483875580766
+}
+```
 
 ## POST - Création
+### Requête `/forum/category` méthode `POST`
+JSON à envoyer :
+```
+{
+	"forum_icon_id":1,
+	"title": "test api",
+	"position": 5
+}
+```
+### Requête `/forum/forum` méthode `POST`
+JSON à envoyer :
+```
+{
+	"forum_category_id": 1,
+	"forum_icon_id":1,
+	"title": "test api",
+	"description": "test de l'api",
+	"position": 30
+}
+```
+### Requête `/forum/subject` méthode `POST`
+JSON à envoyer :
+```
+{
+	"forum_forum_id": 1,
+	"title": "test de sujet",
+	"post": {
+		"content": "contenue du premier post"
+	}
+}
+```
+### Requête `/forum/subject/post` méthode `POST`
+JSON à envoyer :
+```
+{
+	"forum_subject_id": 1,
+	"content": "suite du contenue d'un sujet"
+}
+```
+### Requête `/forum/icon` méthode `POST`
+JSON à envoyer :
+```
+{
+	"path": "url_de_l'image"
+}
+```
 
 ## PUT - Modification
+### Requête `/forum/category/{id_category}` méthode `PUT`
+JSON à envoyer :
+```
+{
+	"forum_icon_id": 1,
+	"title": "modifié",
+	"position": 42
+}
+```
+### Requête `/forum/forum/{id_forum}` méthode `PUT`
+JSON à envoyer :
+```
+{
+	"forum_category_id": 1,
+	"forum_icon_id": 1,
+	"title": "forum modifié",
+	"description": "description modifiée",
+	"position": 42
+}
+```
+### Requête `/forum/icon/{id_icon}` méthode `PUT`
+JSON à envoyer :
+```
+{
+	"path": "path_de_l'image"
+}
+```
+### Requête `/forum/post/{id_post}` méthode `PUT`
+JSON à envoyer :
+```
+{
+	"content": "content modifié"
+}
+```
+### Requête `/forum/admin/post/{id_post}` méthode `PUT`
+JSON à envoyer :
+```
+{
+	"content": "content modifié"
+}
+```
+### Requête `/forum/post/{id_post}/like` méthode `PUT`
+### Requête `/forum/post/{id_post}/dislike` méthode `PUT`
+### Requête `/forum/subject/{id_subject}` méthode `PUT`
+JSON à envoyer :
+```
+{
+	"title": "title modifié"
+}
+```
+### Requête `/forum/admin/subject/{id_subject}` méthode `PUT`
+JSON à envoyer :
+```
+{
+	"title": "title modifié"
+}
+```
+### Requête `/forum/admin/subject/{id_subject}/pin` méthode `PUT`
+### Requête `/forum/admin/subject/{id_subject}/unpin` méthode `PUT`
 
 ## DELETE - Suppression
+### Requête `/forum/category/{id_category}` méthode `DELETE`
+### Requête `/forum/forum/{id_forum}` méthode `DELETE`
+### Requête `/forum/icon/{id_icon}` méthode `DELETE`
+### Requête `/forum/post/{id_post}` méthode `DELETE`
+### Requête `/forum/admin/post/{id_post}` méthode `DELETE`
+### Requête `/forum/subject/{id_subject}` méthode `DELETE`
+### Requête `/forum/admin/subject/{id_subject}` méthode `DELETE`
